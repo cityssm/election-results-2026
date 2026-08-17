@@ -1,0 +1,31 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "arealist",
+    "cityssm",
+    "configurator",
+    "consigno",
+    "findagrave",
+    "fontawesome",
+    "fullwidth",
+    "hoverable",
+    "ical",
+    "innerhtml",
+    "javascripts",
+    "jsbarcode",
+    "maxlength",
+    "millis",
+    "ntfy",
+    "onremoved",
+    "onshown",
+    "papaparse",
+    "preneed",
+    "saultstemarie",
+    "sonarjs"
+  ],
+  "ignoreWords": [],
+  "import": []
+}

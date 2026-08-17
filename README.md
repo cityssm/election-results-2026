@@ -1,17 +1,18 @@
-# Election Results 2022
+# Election Results 2026
 
-On election night, a website will be updated regularly with results 
-of the 2022 City of Sault Ste. Marie's municipal election as they become available.
+On election night, a website will be updated regularly with results
+of the 2026 City of Sault Ste. Marie's municipal election as they become available.
 A backup of that website will be maintained on GitHub Pages
 in the event of an interruption with the main results website.
 
-**Note that the results on the website should be considered unofficial until certified by the City Clerk.**
+**Note that the results on the website should be considered unofficial
+until certified by the City Clerk.**
 
 **Main Election Results Website**<br />
-https://apps.saultstemarie.ca/electionResults (subject to change)
+*Coming Soon*
 
 **Backup Election Results Website**<br />
-https://cityssm.github.io/electionResults2022
+<https://cityssm.github.io/election-results-2026>
 
 ## Looking for the JSON data files?
 
@@ -21,5 +22,5 @@ This file will be updated regularly on election night.
 
 ## Dominion Voting
 
-The results and the website delivering the results
-are made possible by [Dominion Voting](https://www.dominionvoting.com/).
+The results are tabulated and generated using tabulators from
+[Dominion Voting](https://www.dominionvoting.com/).
