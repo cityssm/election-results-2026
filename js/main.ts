@@ -2,7 +2,7 @@
 import type { BulmaJS } from '@cityssm/bulma-js/types.js'
 import type { DOMPurify as DOMPurifyI } from 'dompurify'
 
-import type { AreaListJson, AreaResults, AreaResultsJson } from './types.js'
+import type { AreaResultsJson, ContestResult } from './types.js'
 
 declare const bulmaJS: BulmaJS
 declare const DOMPurify: DOMPurifyI
@@ -16,15 +16,14 @@ declare const DOMPurify: DOMPurifyI
 
   const loopMillis = 10_000
 
-  let areaListJson: AreaListJson | undefined
   let areaResultsJson: AreaResultsJson | undefined
 
   const tabsMenuElement = document.querySelector<HTMLUListElement>('.menu-list')
   const tabsContainerElement = document.querySelector<HTMLElement>('main')
 
-  function renderAreaResults(areaId: string, areaResult: AreaResults): void {
+  function renderContestResults(contestResult: ContestResult): void {
     const containerElement = tabsContainerElement?.querySelector<HTMLElement>(
-      `#area-${areaId}`
+      `#contest-${contestResult.id}`
     )
 
     if (containerElement === undefined || containerElement === null) {
@@ -33,60 +32,57 @@ declare const DOMPurify: DOMPurifyI
 
     containerElement.textContent = ''
 
-    for (const contestResult of areaResult.contestResults) {
-      const contestContainerElement = document.createElement('div')
+    const contestContainerElement = document.createElement('div')
 
-      contestContainerElement.className = 'panel'
+    contestContainerElement.className = 'panel'
 
-      // eslint-disable-next-line browser-security/no-innerhtml
-      contestContainerElement.innerHTML = /* html */ `
-        <h2 class="panel-heading">
-          ${DOMPurify.sanitize(contestResult.contestName)}
-        </h2>
-        <div class="panel-block is-block"></div>
-      `
+    // eslint-disable-next-line browser-security/no-innerhtml
+    contestContainerElement.innerHTML = /* html */ `
+      <h2 class="panel-heading">
+        ${DOMPurify.sanitize(contestResult.contestName)}
+      </h2>
+      <div class="panel-block is-block"></div>
+    `
 
-      const contestTableElement = document.createElement('table')
-      contestTableElement.className =
-        'table is-fullwidth is-striped is-hoverable'
+    const contestTableElement = document.createElement('table')
+    contestTableElement.className = 'table is-fullwidth is-striped is-hoverable'
 
-      // eslint-disable-next-line browser-security/no-innerhtml
-      contestTableElement.innerHTML = /* html */ `
-        <thead>
-          <tr>
-            <th>Choice</th>
-            <th class="has-text-right">Votes</th>
-            <th class="has-text-right" style="width:10em">Percentage</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${contestResult.choiceResults
-            .toSorted((a, b) => b.votes - a.votes)
-            .map(
-              (choiceResult) => /* html */ `
-                <tr class="${choiceResult.isWinner === 1 ? 'has-background-success-light has-text-weight-semibold' : ''}">
-                  <td>${DOMPurify.sanitize(choiceResult.choiceName)}</td>
-                  <td class="has-text-right">
-                    ${contestResult.isAcclaimed ? '-' : DOMPurify.sanitize(choiceResult.votes.toLocaleString())}
-                  </td>
-                  <td class="has-text-right">
-                    ${contestResult.isAcclaimed ? '<span class="tag is-success">Acclaimed</span>' : DOMPurify.sanitize(choiceResult.percentage)}
-                  </td>
-                </tr>
-              `
-            )
-            .join('')}
-        </tbody>
-      `
+    // eslint-disable-next-line browser-security/no-innerhtml
+    contestTableElement.innerHTML = /* html */ `
+      <thead>
+        <tr>
+          <th>Choice</th>
+          <th class="has-text-right">Votes</th>
+          <th class="has-text-right" style="width:10em">Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${contestResult.choiceResults
+          .toSorted((a, b) => b.votes - a.votes)
+          .map(
+            (choiceResult) => /* html */ `
+              <tr class="${choiceResult.isWinner === 1 ? 'has-background-success-light has-text-weight-semibold' : ''}">
+                <td>${DOMPurify.sanitize(choiceResult.choiceName)}</td>
+                <td class="has-text-right">
+                  ${contestResult.isAcclaimed ? '-' : DOMPurify.sanitize(choiceResult.votes.toLocaleString())}
+                </td>
+                <td class="has-text-right">
+                  ${contestResult.isAcclaimed ? '<span class="tag is-success">Acclaimed</span>' : DOMPurify.sanitize(choiceResult.percentage)}
+                </td>
+              </tr>
+            `
+          )
+          .join('')}
+      </tbody>
+    `
 
-      contestContainerElement
-        .querySelector('.panel-block')
-        ?.append(contestTableElement)
-      containerElement.append(contestContainerElement)
-    }
+    contestContainerElement
+      .querySelector('.panel-block')
+      ?.append(contestTableElement)
+    containerElement.append(contestContainerElement)
   }
 
-  function renderAllAreaResults(): void {
+  function renderAllContestResults(): void {
     ;(
       document.querySelector('#header-closedTabulators') as HTMLElement
     ).textContent =
@@ -128,13 +124,15 @@ declare const DOMPurify: DOMPurifyI
     }
 
     for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
-      for (const [areaId, areaResult] of Object.entries(areaResultObject)) {
-        renderAreaResults(areaId, areaResult)
+      for (const areaResult of Object.values(areaResultObject)) {
+        for (const contestResult of areaResult.contestResults) {
+          renderContestResults(contestResult)
+        }
       }
     }
   }
 
-  function loadAreaResults(): void {
+  function loadAreaResults(isFirstLoad = false): void {
     void fetch(`data/arearesults.json?_=${Date.now()}`)
       .then(
         async (response) =>
@@ -142,7 +140,17 @@ declare const DOMPurify: DOMPurifyI
       )
       .then((_areaResults: AreaResultsJson) => {
         areaResultsJson = _areaResults
-        renderAllAreaResults()
+
+        if (isFirstLoad) {
+          renderContestTabs()
+
+          refreshTimeout = globalThis.setInterval(
+            loadAreaResults,
+            refreshMillis
+          )
+        }
+
+        renderAllContestResults()
       })
       .catch(() => {
         if (areaResultsJson === undefined) {
@@ -167,7 +175,7 @@ declare const DOMPurify: DOMPurifyI
    * Load Area List
    */
 
-  function selectAreaTabByLinkElement(
+  function selectContestTabByLinkElement(
     selectedTabElement: HTMLAnchorElement
   ): void {
     /*
@@ -196,26 +204,26 @@ declare const DOMPurify: DOMPurifyI
     selectedTabElement.classList.add('is-active')
 
     tabsContainerElement
-      ?.querySelector(`#area-${selectedTabElement.dataset.areaId}`)
+      ?.querySelector(`#contest-${selectedTabElement.dataset.contestId}`)
       ?.classList.remove('is-hidden')
   }
 
-  function uncheckLoopThroughAreas(): void {
+  function uncheckLoopThroughContests(): void {
     ;(
-      document.querySelector('#footer-loopThroughAreas') as HTMLInputElement
+      document.querySelector('#footer-loopThroughContests') as HTMLInputElement
     ).checked = false
   }
 
-  function selectAreaTabByClick(event: MouseEvent): void {
+  function selectContestTabByClick(event: MouseEvent): void {
     event.preventDefault()
 
-    uncheckLoopThroughAreas()
+    uncheckLoopThroughContests()
 
     const selectedTabElement = event.currentTarget as HTMLAnchorElement
-    selectAreaTabByLinkElement(selectedTabElement)
+    selectContestTabByLinkElement(selectedTabElement)
   }
 
-  function selectNextAreaTab(): void {
+  function selectNextContestTab(): void {
     const selectedTabElement =
       tabsMenuElement?.querySelector<HTMLAnchorElement>('a.is-active')
 
@@ -235,31 +243,25 @@ declare const DOMPurify: DOMPurifyI
       return
     }
 
-    selectAreaTabByLinkElement(nextTabLinkElement)
+    selectContestTabByLinkElement(nextTabLinkElement)
   }
 
-  function renderAreaTabs(): void {
-    if (areaListJson === undefined) {
-      bulmaJS.alert({
-        contextualColorName: 'danger',
-        title: 'Error Parsing Election Data',
-
-        message: 'Please refresh your browser to try again.',
-        okButton: {
-          text: 'Refresh Now',
-
-          callbackFunction() {
-            globalThis.location.reload()
-          }
-        }
-      })
-
+  function renderContestTabs(): void {
+    if (areaResultsJson === undefined) {
       return
     }
 
+    const contests = areaResultsJson.areaResults.flatMap((areaResultList) =>
+      Object.values(areaResultList).flatMap(
+        (areaResult) => areaResult.contestResults
+      )
+    )
+
+    contests.sort((a, b) => a.sort - b.sort)
+
     let firstLinkElement: HTMLAnchorElement | undefined
 
-    for (const area of areaListJson) {
+    for (const contestResult of contests) {
       /*
        * Tab
        */
@@ -267,10 +269,11 @@ declare const DOMPurify: DOMPurifyI
       const listItemElement = document.createElement('li')
       const linkElement = document.createElement('a')
 
-      linkElement.dataset.areaId = area.id
-      linkElement.href = `#area-${area.id}`
-      linkElement.textContent = area.areaName
-      linkElement.addEventListener('click', selectAreaTabByClick)
+      linkElement.dataset.contestId = contestResult.id
+      linkElement.href = `#contest-${contestResult.id}`
+      linkElement.textContent = contestResult.contestName
+
+      linkElement.addEventListener('click', selectContestTabByClick)
 
       listItemElement.append(linkElement)
       tabsMenuElement?.append(listItemElement)
@@ -282,68 +285,42 @@ declare const DOMPurify: DOMPurifyI
        */
 
       const containerElement = document.createElement('section')
-      containerElement.id = `area-${area.id}`
+      containerElement.id = `contest-${contestResult.id}`
       containerElement.className =
         'is-hidden animate__animated animate__fadeIn animate__faster'
-      containerElement.dataset.areaId = area.id
-      containerElement.textContent = `Loading ${area.areaName}...`
+      containerElement.dataset.contestId = contestResult.id
+      containerElement.textContent = `Loading ${contestResult.contestName}...`
 
       tabsContainerElement?.append(containerElement)
     }
 
     if (firstLinkElement !== undefined) {
-      selectAreaTabByLinkElement(firstLinkElement)
+      selectContestTabByLinkElement(firstLinkElement)
     }
-
-    refreshTimeout = globalThis.setInterval(loadAreaResults, refreshMillis)
-    loadAreaResults()
 
     globalThis.setInterval(() => {
       if (
-        document.querySelector<HTMLInputElement>('#footer-loopThroughAreas')
+        document.querySelector<HTMLInputElement>('#footer-loopThroughContests')
           ?.checked ??
         false
       ) {
-        selectNextAreaTab()
+        selectNextContestTab()
       }
     }, loopMillis)
   }
 
-  void fetch(`data/arealist.json?_=${Date.now()}`)
-    .then(
-      async (response) => (await response.json()) as unknown as AreaListJson
-    )
-    .then((_areaList: AreaListJson) => {
-      areaListJson = _areaList
-
-      renderAreaTabs()
-    })
-    .catch(() => {
-      bulmaJS.alert({
-        contextualColorName: 'danger',
-        title: 'Error Loading Election Data',
-
-        message: 'Please refresh your browser to try again.',
-        okButton: {
-          text: 'Refresh Now',
-
-          callbackFunction() {
-            globalThis.location.reload()
-          }
-        }
-      })
-    })
-
   document
-    .querySelector<HTMLButtonElement>('.is-toggle-areas-menu')
+    .querySelector<HTMLButtonElement>('.is-toggle-contests-menu')
     ?.addEventListener('click', () => {
       document.querySelector('.menu')?.classList.toggle('is-hidden-touch')
     })
 
   document
-    .querySelector<HTMLButtonElement>('.is-next-area-button')
+    .querySelector<HTMLButtonElement>('.is-next-contest-button')
     ?.addEventListener('click', () => {
-      uncheckLoopThroughAreas()
-      selectNextAreaTab()
+      uncheckLoopThroughContests()
+      selectNextContestTab()
     })
+
+  loadAreaResults(true)
 })()

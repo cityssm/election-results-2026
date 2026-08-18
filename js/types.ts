@@ -42,6 +42,29 @@ interface Statistics {
   }>
 }
 
+export interface ContestResult {
+  id: IdValue
+  contestName: string
+  voteFor: number
+  isAcclaimed: boolean
+  eligibleVoters: number
+  turnout: PercentageValue
+  ballotCast: number
+  sort: number
+
+  choiceResults: Array<{
+    id: IdValue
+    choiceName: string
+    votes: number
+    percentage: PercentageValue
+    isIncumbent: BooleanNumberValue
+    isDisabled: BooleanNumberValue
+    gender: string
+    isWinner: BooleanNumberValue
+    partyBreakdown: unknown[]
+  }>
+}
+
 export interface AreaResults {
   statistics: Statistics & {
     turnout: PercentageValue
@@ -58,28 +81,7 @@ export interface AreaResults {
     closedPolls: number
   }
 
-  contestResults: Array<{
-    id: IdValue
-    contestName: string
-    voteFor: number
-    isAcclaimed: boolean
-    eligibleVoters: number
-    turnout: PercentageValue
-    ballotCast: number
-    sort: number
-
-    choiceResults: Array<{
-      id: IdValue
-      choiceName: string
-      votes: number
-      percentage: PercentageValue
-      isIncumbent: BooleanNumberValue
-      isDisabled: BooleanNumberValue
-      gender: string
-      isWinner: BooleanNumberValue
-      partyBreakdown: unknown[]
-    }>
-  }>
+  contestResults: ContestResult[]
 }
 
 export interface AreaResultsJson {

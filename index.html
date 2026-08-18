@@ -80,33 +80,35 @@
     </header>
 
     <div class="container is-max-widescreen p-3">
-      <div class="columns is-desktop is-multiline">
+      <div class="columns is-desktop">
         <div class="column is-3-desktop">
-          <button class="button is-hidden-desktop is-fullwidth is-toggle-areas-menu mb-3" type="button">
-            Toggle Areas Menu
+          <button class="button is-hidden-desktop is-fullwidth is-toggle-contests-menu mb-3" type="button">
+            <span>Toggle Contests Menu</span>
+            <span class="icon is-small">
+              <i class="fa-solid fa-caret-down"></i>
+            </span>
           </button>
           <nav class="menu is-hidden-touch">
             <ul class="menu-list"></ul>
           </nav>
-          
         </div>
         <div class="column">
           <div class="field has-addons has-addons-centered">
             <div class="control">
               <label class="button">
                 <span class="mr-3">
-                  <input id="footer-loopThroughAreas" type="checkbox" />
+                  <input id="footer-loopThroughContests" type="checkbox" />
                 </span>
                 <span>
-                  Loop Through Areas Automatically (every 10 seconds)
+                  Loop Through Contests Automatically (every 10 seconds)
                 </span>
               </label>
             </div>
             <div class="control">
-              <button class="button is-next-area-button" type="button">
-                <span>Next Area</span>
+              <button class="button is-next-contest-button" type="button">
+                <span>Next Contest</span>
                 <span class="icon is-small">
-                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-chevron-right"></i>
                 </span>
               </button>
             </div>
