@@ -12,6 +12,10 @@
   font-size: var(--bulma-size-x-large);
 }
 
-label.button:has(input[type="checkbox"]:checked) {
-  background-color: hsl(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-light-l));
+label.button:has(input[type='checkbox']:checked) {
+  background-color: hsl(
+    var(--bulma-primary-h),
+    var(--bulma-primary-s),
+    var(--bulma-light-l)
+  );
 }
