@@ -7,27 +7,47 @@ type PercentageValue = `${number}.${number}%`
 
 type BooleanNumberValue = 0 | 1
 
-export type AreaListJson = Area[]
+export interface AreaResultsJson {
+  statistics: Statistics & {
+    projectName: string
+    official: string
 
-export interface Area {
-  id: IdValue
-  areaName: string
-  sort: number
-  hasContests: boolean
-  areaTypeId: AreaType['id']
-  parentAreaId: IdValue
+    /** yyyy-mm-dd hh:mm:ss */
+    timeStamp: TimestampValue
+
+    globTurnout: PercentageValue
+    globBallotCast: number
+
+    globTabulators: number
+    globClosedTabulators: number
+
+    globStartedPolls: number
+    globPolls: number
+    globClosedPolls: number
+
+    partyStats: unknown[]
+  }
+
+  areaResults: Array<Record<IdValue, AreaResults>>
 }
 
-export type AreaTypeJson = AreaType[]
+export interface AreaResults {
+  statistics: Statistics & {
+    turnout: PercentageValue
+    turnout2: PercentageValue
 
-export interface AreaType {
-  id: IdValue
-  areaType: string
-  hasContests: boolean
-  showByDefault: boolean
+    ballotCast: number
+    ballotCast2: number
 
-  /** Lower case property name */
-  parentid: '' | AreaType['id']
+    tabulators: number
+    closedTabulators: number
+
+    startedPolls: number
+    polls: number
+    closedPolls: number
+  }
+
+  contestResults: ContestResult[]
 }
 
 interface Statistics {
@@ -63,47 +83,4 @@ export interface ContestResult {
     isWinner: BooleanNumberValue
     partyBreakdown: unknown[]
   }>
-}
-
-export interface AreaResults {
-  statistics: Statistics & {
-    turnout: PercentageValue
-    turnout2: PercentageValue
-
-    ballotCast: number
-    ballotCast2: number
-
-    tabulators: number
-    closedTabulators: number
-
-    startedPolls: number
-    polls: number
-    closedPolls: number
-  }
-
-  contestResults: ContestResult[]
-}
-
-export interface AreaResultsJson {
-  statistics: Statistics & {
-    projectName: string
-    official: string
-
-    /** yyyy-mm-dd hh:mm:ss */
-    timeStamp: TimestampValue
-
-    globTurnout: PercentageValue
-    globBallotCast: number
-
-    globTabulators: number
-    globClosedTabulators: number
-
-    globStartedPolls: number
-    globPolls: number
-    globClosedPolls: number
-
-    partyStats: unknown[]
-  }
-
-  areaResults: Array<Record<Area['id'], AreaResults>>
 }
