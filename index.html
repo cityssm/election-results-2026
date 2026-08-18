@@ -11,6 +11,12 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
+      crossorigin="anonymous"
+      integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC"
+      rel="stylesheet"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/fontawesome.min.css"
       crossorigin="anonymous"
       integrity="sha384-m8DKa0MtZAZlyNgF18TSkQRYTPDY0sEELpwK2YijfYnVFH8kxiaO6hvopM168nue"
@@ -76,9 +82,13 @@
     <div class="container is-max-widescreen p-3">
       <div class="columns is-desktop is-multiline">
         <div class="column is-3-desktop">
-          <nav class="menu">
+          <button class="button is-hidden-desktop is-fullwidth is-toggle-areas-menu mb-3" type="button">
+            Toggle Areas Menu
+          </button>
+          <nav class="menu is-hidden-touch">
             <ul class="menu-list"></ul>
           </nav>
+          
         </div>
         <div class="column">
           <div class="field has-addons has-addons-centered">
@@ -88,8 +98,7 @@
                   <input id="footer-loopThroughAreas" type="checkbox" />
                 </span>
                 <span>
-                  Loop Through Areas Automatically
-                  (every 10 seconds)
+                  Loop Through Areas Automatically (every 10 seconds)
                 </span>
               </label>
             </div>
@@ -102,7 +111,7 @@
               </button>
             </div>
           </div>
-        
+
           <main class="my-5">
             <section>
               <p class="has-text-centered">

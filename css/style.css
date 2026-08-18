@@ -11,13 +11,3 @@
 .title {
   font-size: var(--bulma-size-x-large);
 }
-
-@media (max-width: 1023px) {
-  .menu li:not(:has(a.is-active)) {
-    display: none;
-  }
-}
-
-.container:has(main) {
-  min-height: 80vh;
-}

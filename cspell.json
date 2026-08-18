@@ -5,9 +5,11 @@
   "dictionaries": [],
   "words": [
     "arealist",
+    "arearesults",
     "cityssm",
     "configurator",
     "consigno",
+    "countinggroups",
     "findagrave",
     "fontawesome",
     "fullwidth",
@@ -22,6 +24,7 @@
     "onremoved",
     "onshown",
     "papaparse",
+    "parentid",
     "preneed",
     "saultstemarie",
     "sonarjs"

@@ -1,3 +1,8 @@
+type IdValue = `${number}`
+
+type TimestampValue =
+  `${number}-${number}-${number} ${number}:${number}:${number}`
+
 type PercentageValue = `${number}.${number}%`
 
 type BooleanNumberValue = 0 | 1
@@ -5,24 +10,24 @@ type BooleanNumberValue = 0 | 1
 export type AreaListJson = Area[]
 
 export interface Area {
-  id: string
+  id: IdValue
   areaName: string
   sort: number
   hasContests: boolean
-  areaTypeId: string
-  parentAreaId: string
+  areaTypeId: AreaType['id']
+  parentAreaId: IdValue
 }
 
 export type AreaTypeJson = AreaType[]
 
 export interface AreaType {
-  id: string
+  id: IdValue
   areaType: string
-  hasContests: string
-  showByDefault: string
+  hasContests: boolean
+  showByDefault: boolean
 
   /** Lower case property name */
-  parentid: string
+  parentid: '' | AreaType['id']
 }
 
 interface Statistics {
@@ -30,7 +35,7 @@ interface Statistics {
 
   /** Lower case property name */
   countinggroups: Array<{
-    countingGroupId: string
+    countingGroupId: IdValue
     countingGroupName: string
     tabulators: number
     closedTabulators: number
@@ -54,7 +59,7 @@ export interface AreaResults {
   }
 
   contestResults: Array<{
-    id: string
+    id: IdValue
     contestName: string
     voteFor: number
     isAcclaimed: boolean
@@ -64,7 +69,7 @@ export interface AreaResults {
     sort: number
 
     choiceResults: Array<{
-      id: string
+      id: IdValue
       choiceName: string
       votes: number
       percentage: PercentageValue
@@ -83,7 +88,7 @@ export interface AreaResultsJson {
     official: string
 
     /** yyyy-mm-dd hh:mm:ss */
-    timeStamp: `${number}-${number}-${number} ${number}:${number}:${number}`
+    timeStamp: TimestampValue
 
     globTurnout: PercentageValue
     globBallotCast: number

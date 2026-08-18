@@ -110,9 +110,13 @@
             ?.querySelector(`#area-${selectedTabElement.dataset.areaId}`)
             ?.classList.remove('is-hidden');
     }
+    function uncheckLoopThroughAreas() {
+        ;
+        document.querySelector('#footer-loopThroughAreas').checked = false;
+    }
     function selectAreaTabByClick(event) {
         event.preventDefault();
-        document.querySelector('#footer-loopThroughAreas').checked = false;
+        uncheckLoopThroughAreas();
         const selectedTabElement = event.currentTarget;
         selectAreaTabByLinkElement(selectedTabElement);
     }
@@ -157,7 +161,8 @@
             firstLinkElement ??= linkElement;
             const containerElement = document.createElement('section');
             containerElement.id = `area-${area.id}`;
-            containerElement.className = 'is-hidden';
+            containerElement.className =
+                'is-hidden animate__animated animate__fadeIn animate__faster';
             containerElement.dataset.areaId = area.id;
             containerElement.textContent = `Loading ${area.areaName}...`;
             tabsContainerElement?.append(containerElement);
@@ -195,10 +200,14 @@
         });
     });
     document
+        .querySelector('.is-toggle-areas-menu')
+        ?.addEventListener('click', () => {
+        document.querySelector('.menu')?.classList.toggle('is-hidden-touch');
+    });
+    document
         .querySelector('.is-next-area-button')
         ?.addEventListener('click', () => {
-        ;
-        document.querySelector('#footer-loopThroughAreas').checked = false;
+        uncheckLoopThroughAreas();
         selectNextAreaTab();
     });
 })();

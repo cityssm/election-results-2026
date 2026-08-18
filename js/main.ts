@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-type-assertion */
 import type { BulmaJS } from '@cityssm/bulma-js/types.js'
 import type { DOMPurify as DOMPurifyI } from 'dompurify'
 
@@ -176,12 +177,16 @@ declare const DOMPurify: DOMPurifyI
       ?.classList.remove('is-hidden')
   }
 
-  function selectAreaTabByClick(event: MouseEvent): void {
-    event.preventDefault()
-
+  function uncheckLoopThroughAreas(): void {
     ;(
       document.querySelector('#footer-loopThroughAreas') as HTMLInputElement
     ).checked = false
+  }
+
+  function selectAreaTabByClick(event: MouseEvent): void {
+    event.preventDefault()
+
+    uncheckLoopThroughAreas()
 
     const selectedTabElement = event.currentTarget as HTMLAnchorElement
     selectAreaTabByLinkElement(selectedTabElement)
@@ -255,7 +260,8 @@ declare const DOMPurify: DOMPurifyI
 
       const containerElement = document.createElement('section')
       containerElement.id = `area-${area.id}`
-      containerElement.className = 'is-hidden'
+      containerElement.className =
+        'is-hidden animate__animated animate__fadeIn animate__faster'
       containerElement.dataset.areaId = area.id
       containerElement.textContent = `Loading ${area.areaName}...`
 
@@ -282,7 +288,6 @@ declare const DOMPurify: DOMPurifyI
 
   void fetch(`data/arealist.json?_=${Date.now()}`)
     .then(
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
       async (response) => (await response.json()) as unknown as AreaListJson
     )
     .then((_areaList: AreaListJson) => {
@@ -307,12 +312,15 @@ declare const DOMPurify: DOMPurifyI
     })
 
   document
+    .querySelector<HTMLButtonElement>('.is-toggle-areas-menu')
+    ?.addEventListener('click', () => {
+      document.querySelector('.menu')?.classList.toggle('is-hidden-touch')
+    })
+
+  document
     .querySelector<HTMLButtonElement>('.is-next-area-button')
     ?.addEventListener('click', () => {
-      ;(
-        document.querySelector('#footer-loopThroughAreas') as HTMLInputElement
-      ).checked = false
-
+      uncheckLoopThroughAreas()
       selectNextAreaTab()
     })
 })()
