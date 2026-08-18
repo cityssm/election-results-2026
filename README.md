@@ -18,7 +18,7 @@ Note that test data, including data from the 2022 election
 may be used leading up to the 2026 election.
 
 **Main Election Results Website**<br />
-_Coming Soon_
+<https://apps.saultstemarie.ca/electionResults>
 
 **Backup Election Results Website**<br />
 <https://cityssm.github.io/election-results-2026>
