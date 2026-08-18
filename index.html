@@ -10,50 +10,121 @@
       integrity="sha384-DCY3M8xLkMu6c9IKcKbe+jHKMjelnwC0p+SBaxfHxoBYZWdJF2X400UdBCgATtAB"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/fontawesome.min.css"
+      crossorigin="anonymous"
+      integrity="sha384-m8DKa0MtZAZlyNgF18TSkQRYTPDY0sEELpwK2YijfYnVFH8kxiaO6hvopM168nue"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/solid.min.css"
+      crossorigin="anonymous"
+      integrity="sha384-p/nJzgOJxEnSeUkMQ0nk5oPsUT5x8eOWi6pxU2ls9qcO9B78dCvZk0JSAOXWXUQN"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
 
     <link href="favicon.ico" rel="shortcut icon" />
   </head>
   <body>
-    <header>
-      <div class="columns is-vcentered">
-        <div class="column">
-          <img src="images/logo.png" alt="Sault Ste. Marie" />
+    <header class="mb-4">
+      <div class="container is-max-widescreen p-3">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <img src="images/logo.png" alt="Sault Ste. Marie" />
+          </div>
+          <div class="column">
+            <h1 class="title">
+              City of Sault Ste. Marie 2026 Municipal Election<br />
+              <small>Unofficial Results</small>
+            </h1>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="columns is-mobile">
+                <div class="column">Tabulators</div>
+                <div class="column is-narrow has-text-right">
+                  <span id="header-closedTabulators" title="Closed Tabulators">
+                    -
+                  </span>
+                  /
+                  <span id="header-tabulators" title="Total Tabulators">-</span>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column">Ballots</div>
+                <div class="column is-narrow has-text-right">
+                  <span id="header-ballotCast" title="Ballots Cast">-</span>
+                  /
+                  <span id="header-eligibleVoters" title="Eligible Voters">
+                    -
+                  </span>
+                </div>
+              </div>
+              <div class="columns is-mobile">
+                <div class="column">Turnout</div>
+                <div class="column is-narrow has-text-right">
+                  <span id="header-turnout" title="Voter Turnout">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="column">
-          <h1 class="title is-5">
-            City of Sault Ste. Marie 2026 Municipal Election<br />
-            <small class="is-size-6">Unofficial Results</small>
-          </h1>
-        </div>
-        <div class="column"></div>
       </div>
     </header>
 
-    <div class="columns">
-      <div class="column is-3">
-        <nav class="menu">
-          <ul class="menu-list"></ul>
-        </nav>
-      </div>
-      <div class="column">
-        <main>
-          <section>Loading...</section>
-        </main>
+    <div class="container is-max-widescreen p-3">
+      <div class="columns is-desktop is-multiline">
+        <div class="column is-3-desktop">
+          <nav class="menu">
+            <ul class="menu-list"></ul>
+          </nav>
+        </div>
+        <div class="column">
+          <div class="field has-addons has-addons-centered">
+            <div class="control">
+              <label class="button">
+                <span class="mr-3">
+                  <input id="footer-loopThroughAreas" type="checkbox" />
+                </span>
+                <span>
+                  Loop Through Areas Automatically
+                  (every 10 seconds)
+                </span>
+              </label>
+            </div>
+            <div class="control">
+              <button class="button is-next-area-button" type="button">
+                <span>Next Area</span>
+                <span class="icon is-small">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        
+          <main class="my-5">
+            <section>
+              <p class="has-text-centered">
+                <span class="icon is-large">
+                  <i class="fa-solid fa-spinner fa-spin fa-2x"></i> </span
+                ><br />
+                Loading...
+              </p>
+            </section>
+          </main>
+
+          <p class="has-text-centered">
+            Last Updated: <span id="footer-timestamp">-</span><br />
+            Refreshes every 30 seconds
+          </p>
+        </div>
       </div>
     </div>
-
-    <footer class="footer">
-
-    </footer>
 
     <script>
       window.exports = window.exports ?? {}
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/js/fontawesome.min.js"
-      crossorigin="anonymous"
-      integrity="sha384-ddR3M8tCFsbVZciRlEd3uVJEyKwXO6t0XGeR8lTWWQuWTKBLRJyK4ArJJ4FRP7ai"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@cityssm/bulma-js@1.0.0-rc.4/src/bulma-js.min.js"
       crossorigin="anonymous"

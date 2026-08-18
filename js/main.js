@@ -1,5 +1,6 @@
 (() => {
     const refreshMillis = 30_000;
+    const loopMillis = 10_000;
     let areaListJson;
     let areaResultsJson;
     const tabsMenuElement = document.querySelector('.menu-list');
@@ -13,14 +14,15 @@
         for (const contestResult of areaResult.contestResults) {
             const contestContainerElement = document.createElement('div');
             contestContainerElement.className = 'panel';
-            contestContainerElement.innerHTML = DOMPurify.sanitize(`
+            contestContainerElement.innerHTML = `
         <h2 class="panel-heading">
-          ${contestResult.contestName}
+          ${DOMPurify.sanitize(contestResult.contestName)}
         </h2>
         <div class="panel-block is-block"></div>
-      `);
+      `;
             const contestTableElement = document.createElement('table');
-            contestTableElement.className = 'table is-fullwidth is-striped is-hoverable';
+            contestTableElement.className =
+                'table is-fullwidth is-striped is-hoverable';
             contestTableElement.innerHTML = `
         <thead>
           <tr>
@@ -53,6 +55,19 @@
         }
     }
     function renderAllAreaResults() {
+        ;
+        document.querySelector('#header-closedTabulators').textContent =
+            areaResultsJson?.statistics.globClosedTabulators.toLocaleString() ?? '';
+        document.querySelector('#header-tabulators').textContent =
+            areaResultsJson?.statistics.globTabulators.toLocaleString() ?? '';
+        document.querySelector('#header-ballotCast').textContent =
+            areaResultsJson?.statistics.globBallotCast.toLocaleString() ?? '';
+        document.querySelector('#header-eligibleVoters').textContent =
+            areaResultsJson?.statistics.eligibleVoters.toLocaleString() ?? '';
+        document.querySelector('#header-turnout').textContent =
+            areaResultsJson?.statistics.globTurnout ?? '';
+        document.querySelector('#footer-timestamp').textContent =
+            areaResultsJson?.statistics.timeStamp ?? '';
         for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
             for (const [areaId, areaResult] of Object.entries(areaResultObject)) {
                 renderAreaResults(areaId, areaResult);
@@ -66,7 +81,21 @@
             areaResultsJson = _areaResults;
             renderAllAreaResults();
         })
-            .catch(() => { });
+            .catch(() => {
+            if (areaResultsJson === undefined) {
+                bulmaJS.alert({
+                    contextualColorName: 'danger',
+                    title: 'Error Loading Election Data',
+                    message: 'Please refresh your browser to try again.',
+                    okButton: {
+                        text: 'Refresh Now',
+                        callbackFunction() {
+                            globalThis.location.reload();
+                        }
+                    }
+                });
+            }
+        });
     }
     function selectAreaTabByLinkElement(selectedTabElement) {
         for (const sectionElement of tabsContainerElement?.querySelectorAll('section') ?? []) {
@@ -82,8 +111,23 @@
             ?.classList.remove('is-hidden');
     }
     function selectAreaTabByClick(event) {
+        event.preventDefault();
+        document.querySelector('#footer-loopThroughAreas').checked = false;
         const selectedTabElement = event.currentTarget;
         selectAreaTabByLinkElement(selectedTabElement);
+    }
+    function selectNextAreaTab() {
+        const selectedTabElement = tabsMenuElement?.querySelector('a.is-active');
+        if (selectedTabElement === undefined || selectedTabElement === null) {
+            return;
+        }
+        let nextTabListItemElement = selectedTabElement.parentElement?.nextElementSibling;
+        nextTabListItemElement ??= tabsMenuElement?.querySelector('li');
+        const nextTabLinkElement = nextTabListItemElement?.querySelector('a');
+        if (nextTabLinkElement === undefined || nextTabLinkElement === null) {
+            return;
+        }
+        selectAreaTabByLinkElement(nextTabLinkElement);
     }
     function renderAreaTabs() {
         if (areaListJson === undefined) {
@@ -123,6 +167,13 @@
         }
         loadAreaResults();
         globalThis.setInterval(loadAreaResults, refreshMillis);
+        globalThis.setInterval(() => {
+            if (document.querySelector('#footer-loopThroughAreas')
+                ?.checked ??
+                false) {
+                selectNextAreaTab();
+            }
+        }, loopMillis);
     }
     void fetch(`data/arealist.json?_=${Date.now()}`)
         .then(async (response) => (await response.json()))
@@ -142,5 +193,12 @@
                 }
             }
         });
+    });
+    document
+        .querySelector('.is-next-area-button')
+        ?.addEventListener('click', () => {
+        ;
+        document.querySelector('#footer-loopThroughAreas').checked = false;
+        selectNextAreaTab();
     });
 })();

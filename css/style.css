@@ -1,0 +1,23 @@
+:root {
+  --bulma-size-small: 1rem;
+  --bulma-size-normal: 1.1rem;
+  --bulma-size-medium: 1.2rem;
+  --bulma-size-large: 1.3rem;
+  --bulma-size-x-large: 1.4rem;
+
+  --bulma-body-font-size: var(--bulma-size-normal);
+}
+
+.title {
+  font-size: var(--bulma-size-x-large);
+}
+
+@media (max-width: 1023px) {
+  .menu li:not(:has(a.is-active)) {
+    display: none;
+  }
+}
+
+.container:has(main) {
+  min-height: 80vh;
+}

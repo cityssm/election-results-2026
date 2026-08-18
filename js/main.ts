@@ -8,6 +8,7 @@ declare const DOMPurify: DOMPurifyI
 
 ;(() => {
   const refreshMillis = 30_000
+  const loopMillis = 10_000
 
   let areaListJson: AreaListJson | undefined
   let areaResultsJson: AreaResultsJson | undefined
@@ -32,15 +33,16 @@ declare const DOMPurify: DOMPurifyI
       contestContainerElement.className = 'panel'
 
       // eslint-disable-next-line browser-security/no-innerhtml
-      contestContainerElement.innerHTML = DOMPurify.sanitize(`
+      contestContainerElement.innerHTML = /* html */ `
         <h2 class="panel-heading">
-          ${contestResult.contestName}
+          ${DOMPurify.sanitize(contestResult.contestName)}
         </h2>
         <div class="panel-block is-block"></div>
-      `)
+      `
 
       const contestTableElement = document.createElement('table')
-      contestTableElement.className = 'table is-fullwidth is-striped is-hoverable'
+      contestTableElement.className =
+        'table is-fullwidth is-striped is-hoverable'
 
       // eslint-disable-next-line browser-security/no-innerhtml
       contestTableElement.innerHTML = /* html */ `
@@ -79,6 +81,28 @@ declare const DOMPurify: DOMPurifyI
   }
 
   function renderAllAreaResults(): void {
+    ;(
+      document.querySelector('#header-closedTabulators') as HTMLElement
+    ).textContent =
+      areaResultsJson?.statistics.globClosedTabulators.toLocaleString() ?? ''
+
+    ;(document.querySelector('#header-tabulators') as HTMLElement).textContent =
+      areaResultsJson?.statistics.globTabulators.toLocaleString() ?? ''
+
+    ;(document.querySelector('#header-ballotCast') as HTMLElement).textContent =
+      areaResultsJson?.statistics.globBallotCast.toLocaleString() ?? ''
+
+    ;(
+      document.querySelector('#header-eligibleVoters') as HTMLElement
+    ).textContent =
+      areaResultsJson?.statistics.eligibleVoters.toLocaleString() ?? ''
+
+    ;(document.querySelector('#header-turnout') as HTMLElement).textContent =
+      areaResultsJson?.statistics.globTurnout ?? ''
+
+    ;(document.querySelector('#footer-timestamp') as HTMLElement).textContent =
+      areaResultsJson?.statistics.timeStamp ?? ''
+
     for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
       for (const [areaId, areaResult] of Object.entries(areaResultObject)) {
         renderAreaResults(areaId, areaResult)
@@ -96,7 +120,23 @@ declare const DOMPurify: DOMPurifyI
         areaResultsJson = _areaResults
         renderAllAreaResults()
       })
-      .catch(() => {})
+      .catch(() => {
+        if (areaResultsJson === undefined) {
+          bulmaJS.alert({
+            contextualColorName: 'danger',
+            title: 'Error Loading Election Data',
+
+            message: 'Please refresh your browser to try again.',
+            okButton: {
+              text: 'Refresh Now',
+
+              callbackFunction() {
+                globalThis.location.reload()
+              }
+            }
+          })
+        }
+      })
   }
 
   /*
@@ -137,8 +177,37 @@ declare const DOMPurify: DOMPurifyI
   }
 
   function selectAreaTabByClick(event: MouseEvent): void {
+    event.preventDefault()
+
+    ;(
+      document.querySelector('#footer-loopThroughAreas') as HTMLInputElement
+    ).checked = false
+
     const selectedTabElement = event.currentTarget as HTMLAnchorElement
     selectAreaTabByLinkElement(selectedTabElement)
+  }
+
+  function selectNextAreaTab(): void {
+    const selectedTabElement =
+      tabsMenuElement?.querySelector<HTMLAnchorElement>('a.is-active')
+
+    if (selectedTabElement === undefined || selectedTabElement === null) {
+      return
+    }
+
+    let nextTabListItemElement =
+      selectedTabElement.parentElement?.nextElementSibling
+
+    nextTabListItemElement ??= tabsMenuElement?.querySelector('li')
+
+    const nextTabLinkElement =
+      nextTabListItemElement?.querySelector<HTMLAnchorElement>('a')
+
+    if (nextTabLinkElement === undefined || nextTabLinkElement === null) {
+      return
+    }
+
+    selectAreaTabByLinkElement(nextTabLinkElement)
   }
 
   function renderAreaTabs(): void {
@@ -199,6 +268,16 @@ declare const DOMPurify: DOMPurifyI
 
     loadAreaResults()
     globalThis.setInterval(loadAreaResults, refreshMillis)
+
+    globalThis.setInterval(() => {
+      if (
+        document.querySelector<HTMLInputElement>('#footer-loopThroughAreas')
+          ?.checked ??
+        false
+      ) {
+        selectNextAreaTab()
+      }
+    }, loopMillis)
   }
 
   void fetch(`data/arealist.json?_=${Date.now()}`)
@@ -225,5 +304,15 @@ declare const DOMPurify: DOMPurifyI
           }
         }
       })
+    })
+
+  document
+    .querySelector<HTMLButtonElement>('.is-next-area-button')
+    ?.addEventListener('click', () => {
+      ;(
+        document.querySelector('#footer-loopThroughAreas') as HTMLInputElement
+      ).checked = false
+
+      selectNextAreaTab()
     })
 })()
