@@ -9,6 +9,11 @@ declare const DOMPurify: DOMPurifyI
 
 ;(() => {
   const refreshMillis = 30_000
+  let refreshTimeout: number | undefined
+
+  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+  const refreshCutoffMillis = 30 * 86_400_000
+
   const loopMillis = 10_000
 
   let areaListJson: AreaListJson | undefined
@@ -103,6 +108,24 @@ declare const DOMPurify: DOMPurifyI
 
     ;(document.querySelector('#footer-timestamp') as HTMLElement).textContent =
       areaResultsJson?.statistics.timeStamp ?? ''
+
+    const timestampDate = new Date(areaResultsJson?.statistics.timeStamp ?? '')
+
+    if (
+      timestampDate.getTime() + refreshCutoffMillis < Date.now() &&
+      areaResultsJson?.statistics.globPolls ===
+        areaResultsJson?.statistics.globClosedPolls &&
+      refreshTimeout !== undefined
+    ) {
+      try {
+        globalThis.clearInterval(refreshTimeout)
+      } catch {
+        // ignore
+      }
+
+      refreshTimeout = undefined
+      document.querySelector('#footer-refresh-interval')?.remove()
+    }
 
     for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
       for (const [areaId, areaResult] of Object.entries(areaResultObject)) {
@@ -272,8 +295,8 @@ declare const DOMPurify: DOMPurifyI
       selectAreaTabByLinkElement(firstLinkElement)
     }
 
+    refreshTimeout = globalThis.setInterval(loadAreaResults, refreshMillis)
     loadAreaResults()
-    globalThis.setInterval(loadAreaResults, refreshMillis)
 
     globalThis.setInterval(() => {
       if (

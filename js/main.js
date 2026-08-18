@@ -1,5 +1,7 @@
 (() => {
     const refreshMillis = 30_000;
+    let refreshTimeout;
+    const refreshCutoffMillis = 30 * 86_400_000;
     const loopMillis = 10_000;
     let areaListJson;
     let areaResultsJson;
@@ -68,6 +70,19 @@
             areaResultsJson?.statistics.globTurnout ?? '';
         document.querySelector('#footer-timestamp').textContent =
             areaResultsJson?.statistics.timeStamp ?? '';
+        const timestampDate = new Date(areaResultsJson?.statistics.timeStamp ?? '');
+        if (timestampDate.getTime() + refreshCutoffMillis < Date.now() &&
+            areaResultsJson?.statistics.globPolls ===
+                areaResultsJson?.statistics.globClosedPolls &&
+            refreshTimeout !== undefined) {
+            try {
+                globalThis.clearInterval(refreshTimeout);
+            }
+            catch {
+            }
+            refreshTimeout = undefined;
+            document.querySelector('#footer-refresh-interval')?.remove();
+        }
         for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
             for (const [areaId, areaResult] of Object.entries(areaResultObject)) {
                 renderAreaResults(areaId, areaResult);
@@ -170,8 +185,8 @@
         if (firstLinkElement !== undefined) {
             selectAreaTabByLinkElement(firstLinkElement);
         }
+        refreshTimeout = globalThis.setInterval(loadAreaResults, refreshMillis);
         loadAreaResults();
-        globalThis.setInterval(loadAreaResults, refreshMillis);
         globalThis.setInterval(() => {
             if (document.querySelector('#footer-loopThroughAreas')
                 ?.checked ??
