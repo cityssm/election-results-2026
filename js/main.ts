@@ -42,7 +42,7 @@ declare const DOMPurify: DOMPurifyI
       <h2 class="panel-heading">
         ${DOMPurify.sanitize(contestResult.contestName)}
       </h2>
-      <div class="panel-block is-block"></div>
+      <div class="panel-block is-block p-2"></div>
     `
 
     const contestTableElement = document.createElement('table')
@@ -52,9 +52,9 @@ declare const DOMPurify: DOMPurifyI
     contestTableElement.innerHTML = /* html */ `
       <thead>
         <tr>
-          <th>Choice</th>
+          <th>Candidate</th>
           <th class="has-text-right">Votes</th>
-          <th class="has-text-right" style="width:10em">Percentage</th>
+          <th class="has-text-right" style="width:1em">Percentage</th>
         </tr>
       </thead>
       <tbody>
@@ -80,6 +80,7 @@ declare const DOMPurify: DOMPurifyI
     contestContainerElement
       .querySelector('.panel-block')
       ?.append(contestTableElement)
+
     containerElement.append(contestContainerElement)
   }
 

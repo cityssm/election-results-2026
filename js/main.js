@@ -18,16 +18,16 @@
       <h2 class="panel-heading">
         ${DOMPurify.sanitize(contestResult.contestName)}
       </h2>
-      <div class="panel-block is-block"></div>
+      <div class="panel-block is-block p-2"></div>
     `;
         const contestTableElement = document.createElement('table');
         contestTableElement.className = 'table is-fullwidth is-striped is-hoverable';
         contestTableElement.innerHTML = `
       <thead>
         <tr>
-          <th>Choice</th>
+          <th>Candidate</th>
           <th class="has-text-right">Votes</th>
-          <th class="has-text-right" style="width:10em">Percentage</th>
+          <th class="has-text-right" style="width:1em">Percentage</th>
         </tr>
       </thead>
       <tbody>
