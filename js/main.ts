@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-type-assertion */
+
 import type { BulmaJS } from '@cityssm/bulma-js/types.js'
 import type { DOMPurify as DOMPurifyI } from 'dompurify'
 
@@ -83,34 +84,38 @@ declare const DOMPurify: DOMPurifyI
   }
 
   function renderAllContestResults(): void {
+    if (areaResultsJson === undefined) {
+      return
+    }
+
     ;(
       document.querySelector('#header-closedTabulators') as HTMLElement
     ).textContent =
-      areaResultsJson?.statistics.globClosedTabulators.toLocaleString() ?? ''
+      areaResultsJson.statistics.globClosedTabulators.toLocaleString()
 
     ;(document.querySelector('#header-tabulators') as HTMLElement).textContent =
-      areaResultsJson?.statistics.globTabulators.toLocaleString() ?? ''
+      areaResultsJson.statistics.globTabulators.toLocaleString()
 
     ;(document.querySelector('#header-ballotCast') as HTMLElement).textContent =
-      areaResultsJson?.statistics.globBallotCast.toLocaleString() ?? ''
+      areaResultsJson.statistics.globBallotCast.toLocaleString()
 
     ;(
       document.querySelector('#header-eligibleVoters') as HTMLElement
-    ).textContent =
-      areaResultsJson?.statistics.eligibleVoters.toLocaleString() ?? ''
+    ).textContent = areaResultsJson.statistics.eligibleVoters.toLocaleString()
 
     ;(document.querySelector('#header-turnout') as HTMLElement).textContent =
-      areaResultsJson?.statistics.globTurnout ?? ''
+      areaResultsJson.statistics.globTurnout
 
     ;(document.querySelector('#footer-timestamp') as HTMLElement).textContent =
-      areaResultsJson?.statistics.timeStamp ?? ''
+      areaResultsJson.statistics.timeStamp
 
-    const timestampDate = new Date(areaResultsJson?.statistics.timeStamp ?? '')
+    const timestampDate = new Date(areaResultsJson.statistics.timeStamp)
 
     if (
       timestampDate.getTime() + refreshCutoffMillis < Date.now() &&
-      areaResultsJson?.statistics.globPolls ===
-        areaResultsJson?.statistics.globClosedPolls &&
+      areaResultsJson.statistics.globClosedPolls > 0 &&
+      areaResultsJson.statistics.globPolls ===
+        areaResultsJson.statistics.globClosedPolls &&
       refreshTimeout !== undefined
     ) {
       try {
@@ -123,7 +128,7 @@ declare const DOMPurify: DOMPurifyI
       document.querySelector('#footer-refresh-interval')?.remove()
     }
 
-    for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
+    for (const areaResultObject of areaResultsJson.areaResults) {
       for (const areaResult of Object.values(areaResultObject)) {
         for (const contestResult of areaResult.contestResults) {
           renderContestResults(contestResult)

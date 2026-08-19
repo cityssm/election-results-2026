@@ -53,23 +53,26 @@
         containerElement.append(contestContainerElement);
     }
     function renderAllContestResults() {
+        if (areaResultsJson === undefined) {
+            return;
+        }
         ;
         document.querySelector('#header-closedTabulators').textContent =
-            areaResultsJson?.statistics.globClosedTabulators.toLocaleString() ?? '';
+            areaResultsJson.statistics.globClosedTabulators.toLocaleString();
         document.querySelector('#header-tabulators').textContent =
-            areaResultsJson?.statistics.globTabulators.toLocaleString() ?? '';
+            areaResultsJson.statistics.globTabulators.toLocaleString();
         document.querySelector('#header-ballotCast').textContent =
-            areaResultsJson?.statistics.globBallotCast.toLocaleString() ?? '';
-        document.querySelector('#header-eligibleVoters').textContent =
-            areaResultsJson?.statistics.eligibleVoters.toLocaleString() ?? '';
+            areaResultsJson.statistics.globBallotCast.toLocaleString();
+        document.querySelector('#header-eligibleVoters').textContent = areaResultsJson.statistics.eligibleVoters.toLocaleString();
         document.querySelector('#header-turnout').textContent =
-            areaResultsJson?.statistics.globTurnout ?? '';
+            areaResultsJson.statistics.globTurnout;
         document.querySelector('#footer-timestamp').textContent =
-            areaResultsJson?.statistics.timeStamp ?? '';
-        const timestampDate = new Date(areaResultsJson?.statistics.timeStamp ?? '');
+            areaResultsJson.statistics.timeStamp;
+        const timestampDate = new Date(areaResultsJson.statistics.timeStamp);
         if (timestampDate.getTime() + refreshCutoffMillis < Date.now() &&
-            areaResultsJson?.statistics.globPolls ===
-                areaResultsJson?.statistics.globClosedPolls &&
+            areaResultsJson.statistics.globClosedPolls > 0 &&
+            areaResultsJson.statistics.globPolls ===
+                areaResultsJson.statistics.globClosedPolls &&
             refreshTimeout !== undefined) {
             try {
                 globalThis.clearInterval(refreshTimeout);
@@ -79,7 +82,7 @@
             refreshTimeout = undefined;
             document.querySelector('#footer-refresh-interval')?.remove();
         }
-        for (const areaResultObject of areaResultsJson?.areaResults ?? []) {
+        for (const areaResultObject of areaResultsJson.areaResults) {
             for (const areaResult of Object.values(areaResultObject)) {
                 for (const contestResult of areaResult.contestResults) {
                     renderContestResults(contestResult);
