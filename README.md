@@ -34,3 +34,8 @@ It is exported from tabulator software provided by
 While the file is fairly clear, developers looking to
 use the raw data files can refer to the [`js/types.ts`](js/types.ts)
 Typescript file for further assistance.
+
+The format of the data file is the same as the data file
+used in the 2022 election. Developers looking for a data file
+containing results can see the
+[Election Results 2022 repository](https://github.com/cityssm/electionResults2022/).
