@@ -39,3 +39,8 @@ The format of the data file is the same as the data file
 used in the 2022 election. Developers looking for a data file
 containing results can see the
 [Election Results 2022 repository](https://github.com/cityssm/electionResults2022/).
+
+Note that not all fields in the data file may be used.
+For example, the candidate results record includes fields like
+`isIncumbent`, `isDisabled`, `gender`, and `partyBreakdown`,
+all of which are unused for our purposes.
