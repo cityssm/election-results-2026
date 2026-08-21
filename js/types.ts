@@ -10,8 +10,8 @@ type BooleanNumberValue = 0 | 1
 
 export interface AreaResultsJson {
   statistics: Statistics & {
-    projectName: string
     official: string
+    projectName: string
 
     /** The date and time the results were recorded in yyyy-mm-dd hh:mm:ss format */
     timeStamp: TimestampValue
@@ -28,9 +28,10 @@ export interface AreaResultsJson {
     /** The total number of closed tabulators */
     globClosedTabulators: number
 
-    globStartedPolls: number
     globPolls: number
+
     globClosedPolls: number
+    globStartedPolls: number
 
     partyStats: unknown[]
   }
@@ -47,11 +48,13 @@ export interface AreaResults {
     ballotCast2: number
 
     tabulators: number
+
     closedTabulators: number
 
-    startedPolls: number
     polls: number
+
     closedPolls: number
+    startedPolls: number
   }
 
   contestResults: ContestResult[]
@@ -64,7 +67,9 @@ interface Statistics {
   countinggroups: Array<{
     countingGroupId: IdValue
     countingGroupName: string
+
     tabulators: number
+
     closedTabulators: number
   }>
 }

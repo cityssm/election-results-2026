@@ -1,6 +1,7 @@
 {
   "name": "election-results-2026",
   "version": "1.0.0",
+  "private": true,
   "description": "The website for communicating results in the Sault Ste. Marie 2026 municipal election.",
   "keywords": [
     "election-results"
@@ -23,7 +24,7 @@
   "devDependencies": {
     "@cityssm/bulma-js": "^1.0.0-rc.4",
     "dompurify": "^3.4.13",
-    "eslint-config-cityssm": "^46.0.0",
+    "eslint-config-cityssm": "^47.0.0",
     "prettier-config-cityssm": "^2.1.3"
   }
 }

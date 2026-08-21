@@ -2,7 +2,7 @@
   "statistics": {
     "projectName": "City of Sault Ste Marie 2026 Municipal Election",
     "official": "5761",
-    "timeStamp": "2026-08-20 00:00:00",
+    "timeStamp": "2026-08-21 14:00:00",
     "eligibleVoters": 0,
     "globTurnout": "0%",
     "globBallotCast": 0,
@@ -81,7 +81,7 @@
             "choiceResults": [
               {
                 "id": "1",
-                "choiceName": "Selva Rasaiah",
+                "choiceName": "Josh McNally",
                 "votes": 0,
                 "percentage": "0%",
                 "isIncumbent": 0,
@@ -92,7 +92,7 @@
               },
               {
                 "id": "2",
-                "choiceName": "Joel Rowswell",
+                "choiceName": "Selva Rasaiah",
                 "votes": 0,
                 "percentage": "0%",
                 "isIncumbent": 0,
@@ -103,7 +103,7 @@
               },
               {
                 "id": "3",
-                "choiceName": "Matthew Shoemaker",
+                "choiceName": "Joel Rowswell",
                 "votes": 0,
                 "percentage": "0%",
                 "isIncumbent": 0,
@@ -114,6 +114,17 @@
               },
               {
                 "id": "4",
+                "choiceName": "Matthew Shoemaker",
+                "votes": 0,
+                "percentage": "0%",
+                "isIncumbent": 0,
+                "isDisabled": 0,
+                "gender": "Unknown",
+                "isWinner": 0,
+                "partyBreakdown": []
+              },
+              {
+                "id": "5",
                 "choiceName": "Matthew Toffelmire",
                 "votes": 0,
                 "percentage": "0%",
@@ -350,6 +361,17 @@
                 "gender": "Unknown",
                 "isWinner": 0,
                 "partyBreakdown": []
+              },
+              {
+                "id": "19",
+                "choiceName": "Derek Pearce",
+                "votes": 0,
+                "percentage": "0%",
+                "isIncumbent": 0,
+                "isDisabled": 0,
+                "gender": "Unknown",
+                "isWinner": 0,
+                "partyBreakdown": []
               }
             ]
           }
@@ -567,6 +589,17 @@
                 "gender": "Unknown",
                 "isWinner": 0,
                 "partyBreakdown": []
+              },
+              {
+                "id": "31",
+                "choiceName": "Christine Starzomski",
+                "votes": 0,
+                "percentage": "0%",
+                "isIncumbent": 0,
+                "isDisabled": 0,
+                "gender": "Unknown",
+                "isWinner": 0,
+                "partyBreakdown": []
               }
             ]
           }
@@ -617,7 +650,7 @@
             "sort": 6,
             "choiceResults": [
               {
-                "id": "31",
+                "id": "32",
                 "choiceName": "Corey Gardi",
                 "votes": 0,
                 "percentage": "0%",
@@ -628,7 +661,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "32",
+                "id": "33",
                 "choiceName": "Bobbi Jo Holmes",
                 "votes": 0,
                 "percentage": "0%",
@@ -639,7 +672,18 @@
                 "partyBreakdown": []
               },
               {
-                "id": "33",
+                "id": "34",
+                "choiceName": "Dan O'Brien",
+                "votes": 0,
+                "percentage": "0%",
+                "isIncumbent": 0,
+                "isDisabled": 0,
+                "gender": "Unknown",
+                "isWinner": 0,
+                "partyBreakdown": []
+              },
+              {
+                "id": "35",
                 "choiceName": "Matthew Scott",
                 "votes": 0,
                 "percentage": "0%",
@@ -650,7 +694,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "34",
+                "id": "36",
                 "choiceName": "Martin Wyant",
                 "votes": 0,
                 "percentage": "0%",

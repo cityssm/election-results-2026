@@ -1,6 +1,8 @@
 {
   "version": "0.2",
-  "ignorePaths": [],
+  "ignorePaths": [
+    "data/arearesults.json"
+  ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
