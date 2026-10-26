@@ -2,11 +2,11 @@
   "statistics": {
     "projectName": "City of Sault Ste Marie 2026 Municipal Election",
     "official": "5761",
-    "timeStamp": "2026-08-24 16:30:00",
+    "timeStamp": "2026-08-12 14:42:34",
     "eligibleVoters": 0,
     "globTurnout": "0%",
     "globBallotCast": 0,
-    "globTabulators": 45,
+    "globTabulators": 57,
     "globClosedTabulators": 0,
     "globStartedPolls": 0,
     "globPolls": 5,
@@ -15,19 +15,19 @@
       {
         "countingGroupId": "1",
         "countingGroupName": "Election Day",
-        "tabulators": 43,
+        "tabulators": 50,
         "closedTabulators": 0
       },
       {
         "countingGroupId": "2",
         "countingGroupName": "Advance",
-        "tabulators": 1,
+        "tabulators": 5,
         "closedTabulators": 0
       },
       {
         "countingGroupId": "3",
         "countingGroupName": "Mail",
-        "tabulators": 1,
+        "tabulators": 2,
         "closedTabulators": 0
       }
     ],
@@ -42,7 +42,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 45,
+          "tabulators": 57,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 5,
@@ -51,19 +51,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 43,
+              "tabulators": 50,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -145,7 +145,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 13,
+          "tabulators": 25,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 1,
@@ -154,19 +154,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 11,
+              "tabulators": 18,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -174,7 +174,7 @@
         "contestResults": [
           {
             "id": "1002",
-            "contestName": "Councillor – Ward 1",
+            "contestName": "Councillor - Ward 1",
             "voteFor": 2,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -237,7 +237,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 14,
+          "tabulators": 24,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 1,
@@ -246,19 +246,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 12,
+              "tabulators": 17,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -266,7 +266,7 @@
         "contestResults": [
           {
             "id": "1003",
-            "contestName": "Councillor – Ward 2",
+            "contestName": "Councillor - Ward 2",
             "voteFor": 2,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -275,7 +275,7 @@
             "sort": 3,
             "choiceResults": [
               {
-                "id": "11",
+                "id": "10",
                 "choiceName": "Mike Doan",
                 "votes": 0,
                 "percentage": "0%",
@@ -286,7 +286,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "12",
+                "id": "11",
                 "choiceName": "Luke Dufour",
                 "votes": 0,
                 "percentage": "0%",
@@ -297,7 +297,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "13",
+                "id": "12",
                 "choiceName": "Harsh Goyal",
                 "votes": 0,
                 "percentage": "0%",
@@ -308,7 +308,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "14",
+                "id": "13",
                 "choiceName": "Judy Hupponen",
                 "votes": 0,
                 "percentage": "0%",
@@ -319,7 +319,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "15",
+                "id": "14",
                 "choiceName": "Michael McCartan",
                 "votes": 0,
                 "percentage": "0%",
@@ -330,7 +330,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "16",
+                "id": "15",
                 "choiceName": "Cynthia McCutcheon",
                 "votes": 0,
                 "percentage": "0%",
@@ -341,7 +341,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "17",
+                "id": "16",
                 "choiceName": "Dennis Murphy",
                 "votes": 0,
                 "percentage": "0%",
@@ -352,7 +352,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "18",
+                "id": "17",
                 "choiceName": "Stephanie Pagnucco",
                 "votes": 0,
                 "percentage": "0%",
@@ -363,7 +363,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "19",
+                "id": "18",
                 "choiceName": "Derek Pearce",
                 "votes": 0,
                 "percentage": "0%",
@@ -384,7 +384,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 13,
+          "tabulators": 25,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 1,
@@ -393,19 +393,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 11,
+              "tabulators": 18,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -413,7 +413,7 @@
         "contestResults": [
           {
             "id": "1004",
-            "contestName": "Councillor – Ward 3",
+            "contestName": "Councillor - Ward 3",
             "voteFor": 2,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -422,7 +422,7 @@
             "sort": 4,
             "choiceResults": [
               {
-                "id": "20",
+                "id": "19",
                 "choiceName": "Angela Caputo",
                 "votes": 0,
                 "percentage": "0%",
@@ -433,7 +433,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "21",
+                "id": "20",
                 "choiceName": "Nick Delavalle",
                 "votes": 0,
                 "percentage": "0%",
@@ -444,7 +444,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "22",
+                "id": "21",
                 "choiceName": "Luis Moreno",
                 "votes": 0,
                 "percentage": "0%",
@@ -455,7 +455,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "23",
+                "id": "22",
                 "choiceName": "Gary Trembinski",
                 "votes": 0,
                 "percentage": "0%",
@@ -466,7 +466,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "24",
+                "id": "23",
                 "choiceName": "Joshua Vierimaa",
                 "votes": 0,
                 "percentage": "0%",
@@ -477,7 +477,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "25",
+                "id": "24",
                 "choiceName": "Ron Zagordo",
                 "votes": 0,
                 "percentage": "0%",
@@ -498,7 +498,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 18,
+          "tabulators": 26,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 1,
@@ -507,19 +507,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 16,
+              "tabulators": 19,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -527,7 +527,7 @@
         "contestResults": [
           {
             "id": "1005",
-            "contestName": "Councillor – Ward 4",
+            "contestName": "Councillor - Ward 4",
             "voteFor": 2,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -536,7 +536,7 @@
             "sort": 5,
             "choiceResults": [
               {
-                "id": "26",
+                "id": "25",
                 "choiceName": "Marchy Bruni",
                 "votes": 0,
                 "percentage": "0%",
@@ -547,7 +547,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "27",
+                "id": "26",
                 "choiceName": "Jennifer Francella-Medeiros",
                 "votes": 0,
                 "percentage": "0%",
@@ -558,7 +558,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "28",
+                "id": "27",
                 "choiceName": "Stephan Kinach",
                 "votes": 0,
                 "percentage": "0%",
@@ -569,7 +569,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "29",
+                "id": "28",
                 "choiceName": "Marie McLeod",
                 "votes": 0,
                 "percentage": "0%",
@@ -580,7 +580,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "30",
+                "id": "29",
                 "choiceName": "Jim Penfold",
                 "votes": 0,
                 "percentage": "0%",
@@ -591,7 +591,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "31",
+                "id": "30",
                 "choiceName": "Christine Starzomski",
                 "votes": 0,
                 "percentage": "0%",
@@ -612,7 +612,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 14,
+          "tabulators": 25,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 1,
@@ -621,19 +621,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 12,
+              "tabulators": 18,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -641,7 +641,7 @@
         "contestResults": [
           {
             "id": "1006",
-            "contestName": "Councillor – Ward 5",
+            "contestName": "Councillor - Ward 5",
             "voteFor": 2,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -650,7 +650,7 @@
             "sort": 6,
             "choiceResults": [
               {
-                "id": "32",
+                "id": "31",
                 "choiceName": "Corey Gardi",
                 "votes": 0,
                 "percentage": "0%",
@@ -661,7 +661,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "33",
+                "id": "32",
                 "choiceName": "Bobbi Jo Holmes",
                 "votes": 0,
                 "percentage": "0%",
@@ -672,7 +672,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "34",
+                "id": "33",
                 "choiceName": "Dan O'Brien",
                 "votes": 0,
                 "percentage": "0%",
@@ -683,7 +683,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "35",
+                "id": "34",
                 "choiceName": "Matthew Scott",
                 "votes": 0,
                 "percentage": "0%",
@@ -694,7 +694,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "36",
+                "id": "35",
                 "choiceName": "Martin Wyant",
                 "votes": 0,
                 "percentage": "0%",
@@ -715,57 +715,33 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 13,
+          "tabulators": 0,
           "closedTabulators": 0,
           "startedPolls": 0,
-          "polls": 1,
+          "polls": 0,
           "closedPolls": 0,
           "countinggroups": [
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 11,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             }
           ]
         },
-        "contestResults": [
-          {
-            "id": "1007",
-            "contestName": "Algoma District School Board Trustee – Ward 1",
-            "voteFor": 1,
-            "isAcclaimed": true,
-            "eligibleVoters": 0,
-            "turnout": "0%",
-            "ballotCast": 0,
-            "sort": 7,
-            "choiceResults": [
-              {
-                "id": "40",
-                "choiceName": "Norman Fera",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              }
-            ]
-          }
-        ]
+        "contestResults": []
       },
       "45": {
         "statistics": {
@@ -774,7 +750,7 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 14,
+          "tabulators": 24,
           "closedTabulators": 0,
           "startedPolls": 0,
           "polls": 1,
@@ -783,19 +759,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 12,
+              "tabulators": 17,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -803,7 +779,7 @@
         "contestResults": [
           {
             "id": "1008",
-            "contestName": "Algoma District School Board Trustee – Ward 2",
+            "contestName": "Algoma District School Board Trustee - Ward 2",
             "voteFor": 1,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -812,7 +788,7 @@
             "sort": 8,
             "choiceResults": [
               {
-                "id": "45",
+                "id": "37",
                 "choiceName": "Jesse Balanyk",
                 "votes": 0,
                 "percentage": "0%",
@@ -823,7 +799,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "46",
+                "id": "38",
                 "choiceName": "Michelle Murphy",
                 "votes": 0,
                 "percentage": "0%",
@@ -844,67 +820,43 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 13,
+          "tabulators": 0,
           "closedTabulators": 0,
           "startedPolls": 0,
-          "polls": 1,
+          "polls": 0,
           "closedPolls": 0,
           "countinggroups": [
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 11,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             }
           ]
         },
-        "contestResults": [
-          {
-            "id": "1009",
-            "contestName": "Algoma District School Board Trustee – Ward 3",
-            "voteFor": 1,
-            "isAcclaimed": true,
-            "eligibleVoters": 0,
-            "turnout": "0%",
-            "ballotCast": 0,
-            "sort": 9,
-            "choiceResults": [
-              {
-                "id": "47",
-                "choiceName": "Greg Bowman",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              }
-            ]
-          }
-        ]
+        "contestResults": []
       },
       "47": {
         "statistics": {
           "eligibleVoters": 0,
           "turnout": "0%",
           "turnout2": "0%",
-          "ballotCast": 0,
-          "ballotCast2": 0,
-          "tabulators": 18,
-          "closedTabulators": 0,
+          "ballotCast": 20,
+          "ballotCast2": 20,
+          "tabulators": 26,
+          "closedTabulators": 2,
           "startedPolls": 0,
           "polls": 1,
           "closedPolls": 0,
@@ -912,19 +864,19 @@
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 16,
-              "closedTabulators": 0
+              "tabulators": 19,
+              "closedTabulators": 2
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 5,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 2,
               "closedTabulators": 0
             }
           ]
@@ -932,7 +884,7 @@
         "contestResults": [
           {
             "id": "1010",
-            "contestName": "Algoma District School Board Trustee – Ward 4",
+            "contestName": "Algoma District School Board Trustee - Ward 4",
             "voteFor": 1,
             "isAcclaimed": false,
             "eligibleVoters": 0,
@@ -941,7 +893,7 @@
             "sort": 10,
             "choiceResults": [
               {
-                "id": "48",
+                "id": "40",
                 "choiceName": "Tim Marsh",
                 "votes": 0,
                 "percentage": "0%",
@@ -952,7 +904,7 @@
                 "partyBreakdown": []
               },
               {
-                "id": "49",
+                "id": "41",
                 "choiceName": "Sara McCleary",
                 "votes": 0,
                 "percentage": "0%",
@@ -973,57 +925,33 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 14,
+          "tabulators": 0,
           "closedTabulators": 0,
           "startedPolls": 0,
-          "polls": 1,
+          "polls": 0,
           "closedPolls": 0,
           "countinggroups": [
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 12,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             }
           ]
         },
-        "contestResults": [
-          {
-            "id": "1011",
-            "contestName": "Algoma District School Board Trustee – Ward 5",
-            "voteFor": 1,
-            "isAcclaimed": true,
-            "eligibleVoters": 0,
-            "turnout": "0%",
-            "ballotCast": 0,
-            "sort": 11,
-            "choiceResults": [
-              {
-                "id": "51",
-                "choiceName": "Nicholas Apostle",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              }
-            ]
-          }
-        ]
+        "contestResults": []
       },
       "42": {
         "statistics": {
@@ -1032,112 +960,33 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 45,
+          "tabulators": 0,
           "closedTabulators": 0,
           "startedPolls": 0,
-          "polls": 5,
+          "polls": 0,
           "closedPolls": 0,
           "countinggroups": [
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 43,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             }
           ]
         },
-        "contestResults": [
-          {
-            "id": "1012",
-            "contestName": "Huron-Superior Catholic District School Board Trustee",
-            "voteFor": 6,
-            "isAcclaimed": true,
-            "eligibleVoters": 0,
-            "turnout": "0%",
-            "ballotCast": 0,
-            "sort": 12,
-            "choiceResults": [
-              {
-                "id": "53",
-                "choiceName": "Carol Amadio",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              },
-              {
-                "id": "54",
-                "choiceName": "John Bruno",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              },
-              {
-                "id": "55",
-                "choiceName": "John Caputo",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              },
-              {
-                "id": "56",
-                "choiceName": "Tony D'Agostino",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              },
-              {
-                "id": "57",
-                "choiceName": "Wayne Greco",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              },
-              {
-                "id": "58",
-                "choiceName": "Sandra P. Turco",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              }
-            ]
-          }
-        ]
+        "contestResults": []
       },
       "43": {
         "statistics": {
@@ -1146,57 +995,33 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 45,
+          "tabulators": 0,
           "closedTabulators": 0,
           "startedPolls": 0,
-          "polls": 5,
+          "polls": 0,
           "closedPolls": 0,
           "countinggroups": [
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 43,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             }
           ]
         },
-        "contestResults": [
-          {
-            "id": "1013",
-            "contestName": "Conseil scolaire public du Grand Nord de l'Ontario Trustee",
-            "voteFor": 1,
-            "isAcclaimed": true,
-            "eligibleVoters": 0,
-            "turnout": "0%",
-            "ballotCast": 0,
-            "sort": 13,
-            "choiceResults": [
-              {
-                "id": "60",
-                "choiceName": "Danielle Valiquette",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              }
-            ]
-          }
-        ]
+        "contestResults": []
       },
       "44": {
         "statistics": {
@@ -1205,57 +1030,33 @@
           "turnout2": "0%",
           "ballotCast": 0,
           "ballotCast2": 0,
-          "tabulators": 45,
+          "tabulators": 0,
           "closedTabulators": 0,
           "startedPolls": 0,
-          "polls": 5,
+          "polls": 0,
           "closedPolls": 0,
           "countinggroups": [
             {
               "countingGroupId": "1",
               "countingGroupName": "Election Day",
-              "tabulators": 43,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "2",
               "countingGroupName": "Advance",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             },
             {
               "countingGroupId": "3",
               "countingGroupName": "Mail",
-              "tabulators": 1,
+              "tabulators": 0,
               "closedTabulators": 0
             }
           ]
         },
-        "contestResults": [
-          {
-            "id": "1014",
-            "contestName": "Conseil scolaire de district catholique du Nouvel-Ontario Trustee",
-            "voteFor": 1,
-            "isAcclaimed": true,
-            "eligibleVoters": 0,
-            "turnout": "0%",
-            "ballotCast": 0,
-            "sort": 14,
-            "choiceResults": [
-              {
-                "id": "62",
-                "choiceName": "Suzanne Salituri (LeClair)",
-                "votes": 0,
-                "percentage": "0%",
-                "isIncumbent": 0,
-                "isDisabled": 0,
-                "gender": "Unknown",
-                "isWinner": 0,
-                "partyBreakdown": []
-              }
-            ]
-          }
-        ]
+        "contestResults": []
       }
     }
   ]
