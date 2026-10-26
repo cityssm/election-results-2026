@@ -1,7 +1,8 @@
 {
   "version": "0.2",
   "ignorePaths": [
-    "data/arearesults.json"
+    "data/arearesults.json",
+    "data/arearesults-blank.json"
   ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
@@ -10,25 +11,15 @@
     "arearesults",
     "bulma",
     "cityssm",
-    "configurator",
-    "consigno",
     "countinggroups",
-    "findagrave",
     "fontawesome",
     "fullwidth",
     "hoverable",
-    "ical",
     "innerhtml",
     "javascripts",
-    "jsbarcode",
     "maxlength",
     "millis",
-    "ntfy",
-    "onremoved",
-    "onshown",
-    "papaparse",
     "parentid",
-    "preneed",
     "saultstemarie",
     "sonarjs"
   ],
