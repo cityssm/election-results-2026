@@ -103,7 +103,10 @@ declare const DOMPurify: DOMPurifyI
 
     ;(
       document.querySelector('#header-eligibleVoters') as HTMLElement
-    ).textContent = areaResultsJson.statistics.eligibleVoters.toLocaleString()
+    ).textContent =
+      areaResultsJson.statistics.eligibleVoters === 0
+        ? ''
+        : ` / ${areaResultsJson.statistics.eligibleVoters.toLocaleString()}`
 
     ;(document.querySelector('#header-turnout') as HTMLElement).textContent =
       areaResultsJson.statistics.globTurnout

@@ -64,7 +64,10 @@
             areaResultsJson.statistics.globTabulators.toLocaleString();
         document.querySelector('#header-ballotCast').textContent =
             areaResultsJson.statistics.globBallotCast.toLocaleString();
-        document.querySelector('#header-eligibleVoters').textContent = areaResultsJson.statistics.eligibleVoters.toLocaleString();
+        document.querySelector('#header-eligibleVoters').textContent =
+            areaResultsJson.statistics.eligibleVoters === 0
+                ? ''
+                : ` / ${areaResultsJson.statistics.eligibleVoters.toLocaleString()}`;
         document.querySelector('#header-turnout').textContent =
             areaResultsJson.statistics.globTurnout;
         document.querySelector('#footer-timestamp').textContent =
