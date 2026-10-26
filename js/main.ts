@@ -28,6 +28,7 @@ declare const DOMPurify: DOMPurifyI
     )
 
     if (containerElement === undefined || containerElement === null) {
+      globalThis.location.reload()
       return
     }
 

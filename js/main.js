@@ -9,6 +9,7 @@
     function renderContestResults(contestResult) {
         const containerElement = tabsContainerElement?.querySelector(`#contest-${contestResult.id}`);
         if (containerElement === undefined || containerElement === null) {
+            globalThis.location.reload();
             return;
         }
         containerElement.textContent = '';
