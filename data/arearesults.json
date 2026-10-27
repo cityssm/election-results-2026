@@ -2,12 +2,12 @@
 	"statistics": {
 		"projectName": "City of Sault Ste Marie 2026 Municipal Election",
 		"official": "5761",
-		"timeStamp": "2026-10-26 21:01:07",
+		"timeStamp": "2026-10-26 21:09:14",
 		"eligibleVoters": 61888,
-		"globTurnout": "27.19%",
-		"globBallotCast": 16829,
+		"globTurnout": "34.28%",
+		"globBallotCast": 21218,
 		"globTabulators": 57,
-		"globClosedTabulators": 39,
+		"globClosedTabulators": 47,
 		"globStartedPolls": 0,
 		"globPolls": 5,
 		"globClosedPolls": 0,
@@ -16,7 +16,7 @@
 					"countingGroupId": "1",
 					"countingGroupName": "Election Day",
 					"tabulators": 48,
-					"closedTabulators": 33
+					"closedTabulators": 41
 				},
 				{
 					"countingGroupId": "2",
@@ -40,12 +40,12 @@
 			"49": {
 				"statistics": {
 					"eligibleVoters": 61888,
-					"turnout": "27.19%",
-					"turnout2": "27.19%",
-					"ballotCast": 16829,
-					"ballotCast2": 16829,
+					"turnout": "34.28%",
+					"turnout2": "34.28%",
+					"ballotCast": 21218,
+					"ballotCast2": 21218,
 					"tabulators": 57,
-					"closedTabulators": 39,
+					"closedTabulators": 47,
 					"startedPolls": 0,
 					"polls": 5,
 					"closedPolls": 0,
@@ -54,7 +54,7 @@
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 48,
-								"closedTabulators": 33
+								"closedTabulators": 41
 							},
 							{
 								"countingGroupId": "2",
@@ -77,15 +77,15 @@
 						"voteFor": 1,
 						"isAcclaimed": false,
 						"eligibleVoters": 61888,
-						"turnout": "27.19%",
-						"ballotCast": 16829,
+						"turnout": "34.28%",
+						"ballotCast": 21218,
 						"sort": 1,
 						"choiceResults": [
 							{
 								"id": "1",
 								"choiceName": "Josh McNally",
-								"votes": 347,
-								"percentage": "2.07%",
+								"votes": 433,
+								"percentage": "2.05%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -95,8 +95,8 @@
 							{
 								"id": "2",
 								"choiceName": "Selva Rasaiah",
-								"votes": 863,
-								"percentage": "5.15%",
+								"votes": 1101,
+								"percentage": "5.21%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -106,8 +106,8 @@
 							{
 								"id": "3",
 								"choiceName": "Joel Rowswell",
-								"votes": 6988,
-								"percentage": "41.70%",
+								"votes": 8824,
+								"percentage": "41.75%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -117,8 +117,8 @@
 							{
 								"id": "4",
 								"choiceName": "Matthew Shoemaker",
-								"votes": 8379,
-								"percentage": "50.00%",
+								"votes": 10528,
+								"percentage": "49.81%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -128,8 +128,8 @@
 							{
 								"id": "5",
 								"choiceName": "Matthew Toffelmire",
-								"votes": 182,
-								"percentage": "1.09%",
+								"votes": 250,
+								"percentage": "1.18%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -143,249 +143,10 @@
 			"31": {
 				"statistics": {
 					"eligibleVoters": 14314,
-					"turnout": "30.05%",
-					"turnout2": "30.05%",
-					"ballotCast": 4301,
-					"ballotCast2": 4301,
-					"tabulators": 25,
-					"closedTabulators": 19,
-					"startedPolls": 0,
-					"polls": 1,
-					"closedPolls": 0,
-					"countinggroups": [
-							{
-								"countingGroupId": "1",
-								"countingGroupName": "Election Day",
-								"tabulators": 16,
-								"closedTabulators": 13
-							},
-							{
-								"countingGroupId": "2",
-								"countingGroupName": "Advance",
-								"tabulators": 5,
-								"closedTabulators": 2
-							},
-							{
-								"countingGroupId": "3",
-								"countingGroupName": "Mail",
-								"tabulators": 4,
-								"closedTabulators": 4
-							}
-						]
-				},
-				"contestResults": [
-					{
-						"id": "1002",
-						"contestName": "Councillor - Ward 1",
-						"voteFor": 2,
-						"isAcclaimed": false,
-						"eligibleVoters": 14314,
-						"turnout": "30.05%",
-						"ballotCast": 4301,
-						"sort": 2,
-						"choiceResults": [
-							{
-								"id": "6",
-								"choiceName": "Logan Costa",
-								"votes": 2103,
-								"percentage": "28.41%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "7",
-								"choiceName": "Brent Derochie",
-								"votes": 2268,
-								"percentage": "30.64%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "8",
-								"choiceName": "Dan Pallot",
-								"votes": 1337,
-								"percentage": "18.06%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "9",
-								"choiceName": "Sonny Spina",
-								"votes": 1695,
-								"percentage": "22.90%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							}
-						]
-					}
-				]
-			},
-			"32": {
-				"statistics": {
-					"eligibleVoters": 12606,
-					"turnout": "22.31%",
-					"turnout2": "22.31%",
-					"ballotCast": 2812,
-					"ballotCast2": 2812,
-					"tabulators": 24,
-					"closedTabulators": 18,
-					"startedPolls": 0,
-					"polls": 1,
-					"closedPolls": 0,
-					"countinggroups": [
-							{
-								"countingGroupId": "1",
-								"countingGroupName": "Election Day",
-								"tabulators": 15,
-								"closedTabulators": 12
-							},
-							{
-								"countingGroupId": "2",
-								"countingGroupName": "Advance",
-								"tabulators": 5,
-								"closedTabulators": 2
-							},
-							{
-								"countingGroupId": "3",
-								"countingGroupName": "Mail",
-								"tabulators": 4,
-								"closedTabulators": 4
-							}
-						]
-				},
-				"contestResults": [
-					{
-						"id": "1003",
-						"contestName": "Councillor - Ward 2",
-						"voteFor": 2,
-						"isAcclaimed": false,
-						"eligibleVoters": 12606,
-						"turnout": "22.31%",
-						"ballotCast": 2812,
-						"sort": 3,
-						"choiceResults": [
-							{
-								"id": "10",
-								"choiceName": "Mike Doan",
-								"votes": 607,
-								"percentage": "12.14%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "11",
-								"choiceName": "Luke Dufour",
-								"votes": 1267,
-								"percentage": "25.33%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "12",
-								"choiceName": "Harsh Goyal",
-								"votes": 61,
-								"percentage": "1.22%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "13",
-								"choiceName": "Judy Hupponen",
-								"votes": 665,
-								"percentage": "13.29%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "14",
-								"choiceName": "Michael McCartan",
-								"votes": 113,
-								"percentage": "2.26%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "15",
-								"choiceName": "Cynthia McCutcheon",
-								"votes": 688,
-								"percentage": "13.75%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "16",
-								"choiceName": "Dennis Murphy",
-								"votes": 384,
-								"percentage": "7.68%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "17",
-								"choiceName": "Stephanie Pagnucco",
-								"votes": 970,
-								"percentage": "19.39%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							},
-							{
-								"id": "18",
-								"choiceName": "Derek Pearce",
-								"votes": 247,
-								"percentage": "4.94%",
-								"isIncumbent": 0,
-								"isDisabled": 0,
-								"gender": "Unknown",
-								"isWinner": 0,
-								"partyBreakdown": []
-							}
-						]
-					}
-				]
-			},
-			"33": {
-				"statistics": {
-					"eligibleVoters": 12962,
-					"turnout": "34.13%",
-					"turnout2": "34.13%",
-					"ballotCast": 4424,
-					"ballotCast2": 4424,
+					"turnout": "34.90%",
+					"turnout2": "34.90%",
+					"ballotCast": 4996,
+					"ballotCast2": 4996,
 					"tabulators": 25,
 					"closedTabulators": 20,
 					"startedPolls": 0,
@@ -414,20 +175,259 @@
 				},
 				"contestResults": [
 					{
+						"id": "1002",
+						"contestName": "Councillor - Ward 1",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"eligibleVoters": 14314,
+						"turnout": "34.90%",
+						"ballotCast": 4996,
+						"sort": 2,
+						"choiceResults": [
+							{
+								"id": "6",
+								"choiceName": "Logan Costa",
+								"votes": 2395,
+								"percentage": "27.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "7",
+								"choiceName": "Brent Derochie",
+								"votes": 2626,
+								"percentage": "30.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "8",
+								"choiceName": "Dan Pallot",
+								"votes": 1622,
+								"percentage": "18.75%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "9",
+								"choiceName": "Sonny Spina",
+								"votes": 2006,
+								"percentage": "23.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"32": {
+				"statistics": {
+					"eligibleVoters": 12606,
+					"turnout": "27.54%",
+					"turnout2": "27.54%",
+					"ballotCast": 3472,
+					"ballotCast2": 3472,
+					"tabulators": 24,
+					"closedTabulators": 19,
+					"startedPolls": 0,
+					"polls": 1,
+					"closedPolls": 0,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 15,
+								"closedTabulators": 13
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Mail",
+								"tabulators": 4,
+								"closedTabulators": 4
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "1003",
+						"contestName": "Councillor - Ward 2",
+						"voteFor": 2,
+						"isAcclaimed": false,
+						"eligibleVoters": 12606,
+						"turnout": "27.54%",
+						"ballotCast": 3472,
+						"sort": 3,
+						"choiceResults": [
+							{
+								"id": "10",
+								"choiceName": "Mike Doan",
+								"votes": 788,
+								"percentage": "12.74%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "11",
+								"choiceName": "Luke Dufour",
+								"votes": 1607,
+								"percentage": "25.98%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "12",
+								"choiceName": "Harsh Goyal",
+								"votes": 74,
+								"percentage": "1.20%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "13",
+								"choiceName": "Judy Hupponen",
+								"votes": 777,
+								"percentage": "12.56%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "14",
+								"choiceName": "Michael McCartan",
+								"votes": 133,
+								"percentage": "2.15%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "15",
+								"choiceName": "Cynthia McCutcheon",
+								"votes": 843,
+								"percentage": "13.63%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "16",
+								"choiceName": "Dennis Murphy",
+								"votes": 446,
+								"percentage": "7.21%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "17",
+								"choiceName": "Stephanie Pagnucco",
+								"votes": 1223,
+								"percentage": "19.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							},
+							{
+								"id": "18",
+								"choiceName": "Derek Pearce",
+								"votes": 295,
+								"percentage": "4.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Unknown",
+								"isWinner": 0,
+								"partyBreakdown": []
+							}
+						]
+					}
+				]
+			},
+			"33": {
+				"statistics": {
+					"eligibleVoters": 12962,
+					"turnout": "38.90%",
+					"turnout2": "38.90%",
+					"ballotCast": 5042,
+					"ballotCast2": 5042,
+					"tabulators": 25,
+					"closedTabulators": 21,
+					"startedPolls": 0,
+					"polls": 1,
+					"closedPolls": 0,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 16,
+								"closedTabulators": 15
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Mail",
+								"tabulators": 4,
+								"closedTabulators": 4
+							}
+						]
+				},
+				"contestResults": [
+					{
 						"id": "1004",
 						"contestName": "Councillor - Ward 3",
 						"voteFor": 2,
 						"isAcclaimed": false,
 						"eligibleVoters": 12962,
-						"turnout": "34.13%",
-						"ballotCast": 4424,
+						"turnout": "38.90%",
+						"ballotCast": 5042,
 						"sort": 4,
 						"choiceResults": [
 							{
 								"id": "19",
 								"choiceName": "Angela Caputo",
-								"votes": 1429,
-								"percentage": "18.05%",
+								"votes": 1609,
+								"percentage": "17.74%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -437,8 +437,8 @@
 							{
 								"id": "20",
 								"choiceName": "Nick Delavalle",
-								"votes": 657,
-								"percentage": "8.30%",
+								"votes": 728,
+								"percentage": "8.03%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -448,8 +448,8 @@
 							{
 								"id": "21",
 								"choiceName": "Luis Moreno",
-								"votes": 1567,
-								"percentage": "19.80%",
+								"votes": 1848,
+								"percentage": "20.38%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -459,8 +459,8 @@
 							{
 								"id": "22",
 								"choiceName": "Gary Trembinski",
-								"votes": 2513,
-								"percentage": "31.75%",
+								"votes": 2863,
+								"percentage": "31.57%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -470,8 +470,8 @@
 							{
 								"id": "23",
 								"choiceName": "Joshua Vierimaa",
-								"votes": 700,
-								"percentage": "8.84%",
+								"votes": 798,
+								"percentage": "8.80%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -481,8 +481,8 @@
 							{
 								"id": "24",
 								"choiceName": "Ron Zagordo",
-								"votes": 1050,
-								"percentage": "13.26%",
+								"votes": 1223,
+								"percentage": "13.49%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -496,12 +496,12 @@
 			"34": {
 				"statistics": {
 					"eligibleVoters": 12163,
-					"turnout": "20.45%",
-					"turnout2": "20.45%",
-					"ballotCast": 2487,
-					"ballotCast2": 2487,
+					"turnout": "34.42%",
+					"turnout2": "34.42%",
+					"ballotCast": 4186,
+					"ballotCast2": 4186,
 					"tabulators": 26,
-					"closedTabulators": 19,
+					"closedTabulators": 22,
 					"startedPolls": 0,
 					"polls": 1,
 					"closedPolls": 0,
@@ -510,7 +510,7 @@
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 17,
-								"closedTabulators": 13
+								"closedTabulators": 16
 							},
 							{
 								"countingGroupId": "2",
@@ -533,15 +533,15 @@
 						"voteFor": 2,
 						"isAcclaimed": false,
 						"eligibleVoters": 12163,
-						"turnout": "20.45%",
-						"ballotCast": 2487,
+						"turnout": "34.42%",
+						"ballotCast": 4186,
 						"sort": 5,
 						"choiceResults": [
 							{
 								"id": "25",
 								"choiceName": "Marchy Bruni",
-								"votes": 1332,
-								"percentage": "30.14%",
+								"votes": 2338,
+								"percentage": "31.43%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -551,8 +551,8 @@
 							{
 								"id": "26",
 								"choiceName": "Jennifer Francella-Medeiros",
-								"votes": 588,
-								"percentage": "13.31%",
+								"votes": 1060,
+								"percentage": "14.25%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -562,8 +562,8 @@
 							{
 								"id": "27",
 								"choiceName": "Stephan Kinach",
-								"votes": 888,
-								"percentage": "20.10%",
+								"votes": 1507,
+								"percentage": "20.26%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -573,8 +573,8 @@
 							{
 								"id": "28",
 								"choiceName": "Marie McLeod",
-								"votes": 669,
-								"percentage": "15.14%",
+								"votes": 1017,
+								"percentage": "13.67%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -584,8 +584,8 @@
 							{
 								"id": "29",
 								"choiceName": "Jim Penfold",
-								"votes": 375,
-								"percentage": "8.49%",
+								"votes": 678,
+								"percentage": "9.12%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -595,8 +595,8 @@
 							{
 								"id": "30",
 								"choiceName": "Christine Starzomski",
-								"votes": 567,
-								"percentage": "12.83%",
+								"votes": 838,
+								"percentage": "11.27%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -610,12 +610,12 @@
 			"35": {
 				"statistics": {
 					"eligibleVoters": 9843,
-					"turnout": "28.50%",
-					"turnout2": "28.50%",
-					"ballotCast": 2805,
-					"ballotCast2": 2805,
+					"turnout": "35.78%",
+					"turnout2": "35.78%",
+					"ballotCast": 3522,
+					"ballotCast2": 3522,
 					"tabulators": 25,
-					"closedTabulators": 19,
+					"closedTabulators": 21,
 					"startedPolls": 0,
 					"polls": 1,
 					"closedPolls": 0,
@@ -624,7 +624,7 @@
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 16,
-								"closedTabulators": 13
+								"closedTabulators": 15
 							},
 							{
 								"countingGroupId": "2",
@@ -647,15 +647,15 @@
 						"voteFor": 2,
 						"isAcclaimed": false,
 						"eligibleVoters": 9843,
-						"turnout": "28.50%",
-						"ballotCast": 2805,
+						"turnout": "35.78%",
+						"ballotCast": 3522,
 						"sort": 6,
 						"choiceResults": [
 							{
 								"id": "31",
 								"choiceName": "Corey Gardi",
-								"votes": 1411,
-								"percentage": "28.84%",
+								"votes": 1790,
+								"percentage": "29.19%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -665,8 +665,8 @@
 							{
 								"id": "32",
 								"choiceName": "Bobbi Jo Holmes",
-								"votes": 827,
-								"percentage": "16.90%",
+								"votes": 1034,
+								"percentage": "16.86%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -676,8 +676,8 @@
 							{
 								"id": "33",
 								"choiceName": "Dan O'Brien",
-								"votes": 296,
-								"percentage": "6.05%",
+								"votes": 379,
+								"percentage": "6.18%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -687,8 +687,8 @@
 							{
 								"id": "34",
 								"choiceName": "Matthew Scott",
-								"votes": 1295,
-								"percentage": "26.47%",
+								"votes": 1606,
+								"percentage": "26.19%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -698,8 +698,8 @@
 							{
 								"id": "35",
 								"choiceName": "Martin Wyant",
-								"votes": 1064,
-								"percentage": "21.75%",
+								"votes": 1323,
+								"percentage": "21.58%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -749,12 +749,12 @@
 			"45": {
 				"statistics": {
 					"eligibleVoters": 12606,
-					"turnout": "22.31%",
-					"turnout2": "22.31%",
-					"ballotCast": 2812,
-					"ballotCast2": 2812,
+					"turnout": "27.54%",
+					"turnout2": "27.54%",
+					"ballotCast": 3472,
+					"ballotCast2": 3472,
 					"tabulators": 24,
-					"closedTabulators": 18,
+					"closedTabulators": 19,
 					"startedPolls": 0,
 					"polls": 1,
 					"closedPolls": 0,
@@ -763,7 +763,7 @@
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 15,
-								"closedTabulators": 12
+								"closedTabulators": 13
 							},
 							{
 								"countingGroupId": "2",
@@ -787,14 +787,14 @@
 						"isAcclaimed": false,
 						"eligibleVoters": 0,
 						"turnout": "0%",
-						"ballotCast": 2055,
+						"ballotCast": 2579,
 						"sort": 8,
 						"choiceResults": [
 							{
 								"id": "37",
 								"choiceName": "Jesse Balanyk",
-								"votes": 426,
-								"percentage": "24.01%",
+								"votes": 544,
+								"percentage": "24.31%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -804,8 +804,8 @@
 							{
 								"id": "38",
 								"choiceName": "Michelle Murphy",
-								"votes": 1348,
-								"percentage": "75.99%",
+								"votes": 1694,
+								"percentage": "75.69%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -855,12 +855,12 @@
 			"47": {
 				"statistics": {
 					"eligibleVoters": 12163,
-					"turnout": "20.45%",
-					"turnout2": "20.45%",
-					"ballotCast": 2487,
-					"ballotCast2": 2487,
+					"turnout": "34.42%",
+					"turnout2": "34.42%",
+					"ballotCast": 4186,
+					"ballotCast2": 4186,
 					"tabulators": 26,
-					"closedTabulators": 19,
+					"closedTabulators": 22,
 					"startedPolls": 0,
 					"polls": 1,
 					"closedPolls": 0,
@@ -869,7 +869,7 @@
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 17,
-								"closedTabulators": 13
+								"closedTabulators": 16
 							},
 							{
 								"countingGroupId": "2",
@@ -893,14 +893,14 @@
 						"isAcclaimed": false,
 						"eligibleVoters": 0,
 						"turnout": "0%",
-						"ballotCast": 1844,
+						"ballotCast": 2909,
 						"sort": 10,
 						"choiceResults": [
 							{
 								"id": "40",
 								"choiceName": "Tim Marsh",
-								"votes": 487,
-								"percentage": "29.52%",
+								"votes": 834,
+								"percentage": "31.35%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -910,8 +910,8 @@
 							{
 								"id": "41",
 								"choiceName": "Sara McCleary",
-								"votes": 1163,
-								"percentage": "70.48%",
+								"votes": 1826,
+								"percentage": "68.65%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
