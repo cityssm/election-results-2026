@@ -2,27 +2,27 @@
 	"statistics": {
 		"projectName": "City of Sault Ste Marie 2026 Municipal Election",
 		"official": "5761",
-		"timeStamp": "2026-10-26 21:16:32",
+		"timeStamp": "2026-10-26 21:20:44",
 		"eligibleVoters": 61888,
-		"globTurnout": "39.87%",
-		"globBallotCast": 24675,
+		"globTurnout": "40.33%",
+		"globBallotCast": 24958,
 		"globTabulators": 57,
-		"globClosedTabulators": 53,
+		"globClosedTabulators": 57,
 		"globStartedPolls": 0,
 		"globPolls": 5,
-		"globClosedPolls": 0,
+		"globClosedPolls": 5,
 		"countinggroups": [
 				{
 					"countingGroupId": "1",
 					"countingGroupName": "Election Day",
 					"tabulators": 48,
-					"closedTabulators": 47
+					"closedTabulators": 48
 				},
 				{
 					"countingGroupId": "2",
 					"countingGroupName": "Advance",
 					"tabulators": 5,
-					"closedTabulators": 2
+					"closedTabulators": 5
 				},
 				{
 					"countingGroupId": "3",
@@ -40,27 +40,27 @@
 			"49": {
 				"statistics": {
 					"eligibleVoters": 61888,
-					"turnout": "39.87%",
-					"turnout2": "39.87%",
-					"ballotCast": 24675,
-					"ballotCast2": 24675,
+					"turnout": "40.33%",
+					"turnout2": "40.33%",
+					"ballotCast": 24958,
+					"ballotCast2": 24958,
 					"tabulators": 57,
-					"closedTabulators": 53,
+					"closedTabulators": 57,
 					"startedPolls": 0,
 					"polls": 5,
-					"closedPolls": 0,
+					"closedPolls": 5,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 48,
-								"closedTabulators": 47
+								"closedTabulators": 48
 							},
 							{
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -77,15 +77,15 @@
 						"voteFor": 1,
 						"isAcclaimed": false,
 						"eligibleVoters": 61888,
-						"turnout": "39.87%",
-						"ballotCast": 24675,
+						"turnout": "40.33%",
+						"ballotCast": 24958,
 						"sort": 1,
 						"choiceResults": [
 							{
 								"id": "1",
 								"choiceName": "Josh McNally",
-								"votes": 517,
-								"percentage": "2.10%",
+								"votes": 526,
+								"percentage": "2.12%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -95,8 +95,8 @@
 							{
 								"id": "2",
 								"choiceName": "Selva Rasaiah",
-								"votes": 1296,
-								"percentage": "5.27%",
+								"votes": 1326,
+								"percentage": "5.33%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -106,8 +106,8 @@
 							{
 								"id": "3",
 								"choiceName": "Joel Rowswell",
-								"votes": 10264,
-								"percentage": "41.75%",
+								"votes": 10352,
+								"percentage": "41.63%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -117,19 +117,19 @@
 							{
 								"id": "4",
 								"choiceName": "Matthew Shoemaker",
-								"votes": 12206,
-								"percentage": "49.65%",
+								"votes": 12360,
+								"percentage": "49.71%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
 								"id": "5",
 								"choiceName": "Matthew Toffelmire",
-								"votes": 299,
-								"percentage": "1.22%",
+								"votes": 301,
+								"percentage": "1.21%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -148,10 +148,10 @@
 					"ballotCast": 6269,
 					"ballotCast2": 6269,
 					"tabulators": 25,
-					"closedTabulators": 22,
+					"closedTabulators": 25,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
@@ -163,7 +163,7 @@
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -192,7 +192,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -203,7 +203,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -235,27 +235,27 @@
 			"32": {
 				"statistics": {
 					"eligibleVoters": 12606,
-					"turnout": "34.20%",
-					"turnout2": "34.20%",
-					"ballotCast": 4311,
-					"ballotCast2": 4311,
+					"turnout": "36.44%",
+					"turnout2": "36.44%",
+					"ballotCast": 4594,
+					"ballotCast2": 4594,
 					"tabulators": 24,
-					"closedTabulators": 20,
+					"closedTabulators": 24,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 15,
-								"closedTabulators": 14
+								"closedTabulators": 15
 							},
 							{
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -272,15 +272,15 @@
 						"voteFor": 2,
 						"isAcclaimed": false,
 						"eligibleVoters": 12606,
-						"turnout": "34.20%",
-						"ballotCast": 4311,
+						"turnout": "36.44%",
+						"ballotCast": 4594,
 						"sort": 3,
 						"choiceResults": [
 							{
 								"id": "10",
 								"choiceName": "Mike Doan",
-								"votes": 1025,
-								"percentage": "13.33%",
+								"votes": 1075,
+								"percentage": "13.15%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -290,18 +290,18 @@
 							{
 								"id": "11",
 								"choiceName": "Luke Dufour",
-								"votes": 1972,
-								"percentage": "25.65%",
+								"votes": 2111,
+								"percentage": "25.82%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
 								"id": "12",
 								"choiceName": "Harsh Goyal",
-								"votes": 92,
+								"votes": 98,
 								"percentage": "1.20%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
@@ -312,8 +312,8 @@
 							{
 								"id": "13",
 								"choiceName": "Judy Hupponen",
-								"votes": 920,
-								"percentage": "11.97%",
+								"votes": 993,
+								"percentage": "12.14%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -323,8 +323,8 @@
 							{
 								"id": "14",
 								"choiceName": "Michael McCartan",
-								"votes": 177,
-								"percentage": "2.30%",
+								"votes": 181,
+								"percentage": "2.21%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -334,8 +334,8 @@
 							{
 								"id": "15",
 								"choiceName": "Cynthia McCutcheon",
-								"votes": 1004,
-								"percentage": "13.06%",
+								"votes": 1083,
+								"percentage": "13.24%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -345,8 +345,8 @@
 							{
 								"id": "16",
 								"choiceName": "Dennis Murphy",
-								"votes": 529,
-								"percentage": "6.88%",
+								"votes": 568,
+								"percentage": "6.95%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -356,19 +356,19 @@
 							{
 								"id": "17",
 								"choiceName": "Stephanie Pagnucco",
-								"votes": 1622,
-								"percentage": "21.10%",
+								"votes": 1707,
+								"percentage": "20.88%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
 								"id": "18",
 								"choiceName": "Derek Pearce",
-								"votes": 348,
-								"percentage": "4.53%",
+								"votes": 361,
+								"percentage": "4.41%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -387,10 +387,10 @@
 					"ballotCast": 5468,
 					"ballotCast2": 5468,
 					"tabulators": 25,
-					"closedTabulators": 22,
+					"closedTabulators": 25,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
@@ -402,7 +402,7 @@
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -453,7 +453,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -464,7 +464,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -501,10 +501,10 @@
 					"ballotCast": 4648,
 					"ballotCast2": 4648,
 					"tabulators": 26,
-					"closedTabulators": 23,
+					"closedTabulators": 26,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
@@ -516,7 +516,7 @@
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -545,7 +545,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -567,7 +567,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -615,10 +615,10 @@
 					"ballotCast": 3979,
 					"ballotCast2": 3979,
 					"tabulators": 25,
-					"closedTabulators": 22,
+					"closedTabulators": 25,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
@@ -630,7 +630,7 @@
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -659,7 +659,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -692,7 +692,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							},
 							{
@@ -749,27 +749,27 @@
 			"45": {
 				"statistics": {
 					"eligibleVoters": 12606,
-					"turnout": "34.20%",
-					"turnout2": "34.20%",
-					"ballotCast": 4311,
-					"ballotCast2": 4311,
+					"turnout": "36.44%",
+					"turnout2": "36.44%",
+					"ballotCast": 4594,
+					"ballotCast2": 4594,
 					"tabulators": 24,
-					"closedTabulators": 20,
+					"closedTabulators": 24,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
 								"countingGroupName": "Election Day",
 								"tabulators": 15,
-								"closedTabulators": 14
+								"closedTabulators": 15
 							},
 							{
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -787,14 +787,14 @@
 						"isAcclaimed": false,
 						"eligibleVoters": 0,
 						"turnout": "0%",
-						"ballotCast": 3206,
+						"ballotCast": 3449,
 						"sort": 8,
 						"choiceResults": [
 							{
 								"id": "37",
 								"choiceName": "Jesse Balanyk",
-								"votes": 660,
-								"percentage": "23.72%",
+								"votes": 699,
+								"percentage": "23.35%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
@@ -804,12 +804,12 @@
 							{
 								"id": "38",
 								"choiceName": "Michelle Murphy",
-								"votes": 2122,
-								"percentage": "76.28%",
+								"votes": 2294,
+								"percentage": "76.65%",
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							}
 						]
@@ -860,10 +860,10 @@
 					"ballotCast": 4648,
 					"ballotCast2": 4648,
 					"tabulators": 26,
-					"closedTabulators": 23,
+					"closedTabulators": 26,
 					"startedPolls": 0,
 					"polls": 1,
-					"closedPolls": 0,
+					"closedPolls": 1,
 					"countinggroups": [
 							{
 								"countingGroupId": "1",
@@ -875,7 +875,7 @@
 								"countingGroupId": "2",
 								"countingGroupName": "Advance",
 								"tabulators": 5,
-								"closedTabulators": 2
+								"closedTabulators": 5
 							},
 							{
 								"countingGroupId": "3",
@@ -915,7 +915,7 @@
 								"isIncumbent": 0,
 								"isDisabled": 0,
 								"gender": "Unknown",
-								"isWinner": 0,
+								"isWinner": 1,
 								"partyBreakdown": []
 							}
 						]
